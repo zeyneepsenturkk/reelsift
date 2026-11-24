@@ -105,7 +105,7 @@ Tarayıcıda açılan kurulum sayfası (`http://localhost:5174`) adımları sır
 
 Yarıda kesilirse aynı komut kaldığı yerden sürer.
 
-Kurulum bitince uygulama `http://localhost:5173` adresindedir. Bu yol 24 Kasım 2026'da bu deponun temiz bir klonuyla baştan sona denendi: 11 adımın 11'i hatasız, 35 dakika 37 saniye (RTX 4060, Docker önbelleği dolu; film arşivi Releases'ten girişsiz indi), ardından giriş, sağlık denetimi, bir taslak isteği ve MCP ucu doğrulandı. Toplam süre internet hızına göre 45 dakika ile 1 saat arasıdır (ölçüm: sıcak Docker önbelleğiyle yaklaşık 30 dakika).
+Kurulum bitince uygulama `http://localhost:5173` adresindedir. Bu yol 24 Kasım 2026'da bu deponun temiz bir klonuyla baştan sona denendi: 11 adımın 11'i hatasız, 35 dakika 37 saniye (RTX 4060, Docker önbelleği dolu; film arşivi Releases'ten girişsiz indi), ardından giriş, sağlık denetimi, bir taslak isteği ve MCP ucu doğrulandı. Adım adım süreler: [`kalite/kanit/kurulum-provasi-2026-11-24.md`](kalite/kanit/kurulum-provasi-2026-11-24.md). Toplam süre internet hızına göre 45 dakika ile 1 saat arasıdır (ölçüm: sıcak Docker önbelleğiyle yaklaşık 30 dakika).
 
 ### Yapay zekâ asistanıyla kurulum
 
