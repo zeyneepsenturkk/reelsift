@@ -13,6 +13,10 @@ BTK Akademi Yapay Zekâ Kariyer Atölyesi final projesi (Zeynep Şentürk).
 
 ReelSift, film editörleri için bir kürasyon masasıdır. Editör doğal dille bir istek yazar ("Taşrada sıkışmışlık üzerine Türk filmleri"); sistem 94.683 filmlik arşivde arar, uygun filmleri seçer ve her film için gerekçe ile kaynak alıntısı içeren bir seçki taslağı çıkarır. Editör taslağı düzenler, onaylar ve paylaşır. Son söz her zaman editördedir.
 
+<p align="center"><a href="sunum/tanitim/reelsift-nasil-calisir.mp4"><img src="sunum/tanitim/onizleme.gif" alt="ReelSift nasıl çalışır: tanıtım videosundan önizleme" width="720"></a></p>
+
+<p align="center"><b>Tanıtım videosu (76 saniye):</b> <a href="sunum/tanitim/reelsift-nasil-calisir.mp4">ReelSift nasıl çalışır</a>. Ne sorunu çözdüğünü, bir isteğin hangi adımlardan geçtiğini ve ölçüm sonuçlarını anlatır.</p>
+
 | Seçki taslağı | Film ayrıntısı | Paylaşım sayfası |
 |---|---|---|
 | ![Seçki taslağı](sunum/ortak/ekran/taslak.jpg) | ![Film ayrıntısı](sunum/ortak/ekran/film-detay-kart.jpg) | ![Paylaşım sayfası](sunum/ortak/ekran/paylasim.jpg) |
