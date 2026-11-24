@@ -33,18 +33,7 @@ ReelSift, film editörleri için bir kürasyon masasıdır. Editör doğal dille
 
 ## Nasıl çalışır
 
-```mermaid
-flowchart LR
-    E([Editör isteği]) --> A["Anla<br/>dil modeli, yapılı çıktı"]
-    A --> S["Ara<br/>vektör + BM25 + ad / kişi<br/>RRF + yeniden sıralama"]
-    S --> D["Değerlendir<br/>dil modeli adayları okur"]
-    D -- "yeterli film yok" --> S
-    D --> Y["Yaz<br/>gerekçe + kaynak alıntısı"]
-    Y --> V{"Doğrula<br/>düz kod"}
-    V -- "alıntı kaynakta yok" --> X([Film taslağa girmez])
-    V --> C["Cevapla<br/>seçki taslağı"]
-    C --> O([İnsan onayı<br/>yalnız editör])
-```
+<p align="center"><img src="sunum/ortak/ekran/akis.png" alt="Akış: Anla, Ara, Değerlendir, Yaz, Doğrula, Cevapla, İnsan onayı" width="100%"></p>
 
 Bir istek şu adımlardan geçer:
 
