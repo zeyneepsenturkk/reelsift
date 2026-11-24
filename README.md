@@ -48,6 +48,8 @@ Bir istek şu adımlardan geçer:
 5. **Doğrula** (düz kod): alıntı kaynak metinde birebir geçmiyorsa film taslağa girmez.
 6. **Cevapla** (dil modeli): taslak editöre sunulur. Seçkiyi **yalnız editör onaylar**: onay ayrı bir uçtadır ve ajan kodunun onay servisine erişemediği testle denetlenir.
 
+Editör seçki istemek yerine bir bilgi sorusu sorarsa ("Zeki Demirkubuz kimdir?") istek ayrı bir koldan gider: ajan bir MCP aracıyla (`wikipedia_ozet`) kaynak getirir, cevabını o kaynağa dayandırır ve kaynağı cevabın sonuna ekler. Seçki hattındaki arama MCP üzerinden değil, doğrudan arama motoruna yapılır; aynı arama motoru MCP sunucusu olarak dış asistanlara da açıktır (ayrıntı aşağıda, "MCP").
+
 Bu bir RAG (retrieval-augmented generation) sistemidir: önce arşivden bulunur, bulunan metinler dil modeline bağlam olarak verilir, model yalnız bu metinlere dayanarak yazar.
 
 ## Kullanılan teknolojiler
