@@ -1,0 +1,72 @@
+# Geliştirme ortamı. Yer tutucular (${DATA_DIR} vb.) bu dosyanın yanındaki .env'den okunur.
+# Ekran kartı ayrımı docker-compose.override.yml'de:
+# Compose o dosyayı kendiliğinden okur; ekran kartı olmayan makinede
+# `docker compose -f docker-compose.yml up` ile yalnız bu dosya kullanılır.
+services:
+  db:
+    image: pgvector/pgvector:pg18
+    # postmaster PID 1 olursa yetim süreçler ona bağlanır ve "untracked child" çıkışı çöküş
+    # sayılır (Postgres sunucuyu yeniden başlatır); küçük bir init süreci PID 1 olur.
+    init: true
+    # Varsayılan 64 MB /dev/shm paralel HNSW kurulumuna yetmez; maintenance_work_mem'den büyük olmalı.
+    shm_size: "2gb"
+    environment:
+      POSTGRES_DB: ${DJANGO_DB_NAME:-reelsift}
+      POSTGRES_USER: ${DJANGO_DB_USER:-reelsift}
+      POSTGRES_PASSWORD: ${DJANGO_DB_PASSWORD:-reelsift-dev}
+    # pg18 imajında VOLUME /var/lib/postgresql; veri alt dizinde (18/docker) tutulur.
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+  backend:
+    build: ./app/backend
+    command: sh -c "python manage.py migrate --noinput && uvicorn config.asgi:application --host 0.0.0.0 --port 8000 --reload --lifespan on"
+    env_file: .env
+    # Konteynerden host'taki Ollama'ya (host.docker.internal) Linux'ta da erişim.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      DJANGO_SETTINGS_MODULE: config.settings.dev
+      DJANGO_DB_NAME: ${DJANGO_DB_NAME:-reelsift}
+      DJANGO_DB_USER: ${DJANGO_DB_USER:-reelsift}
+      DJANGO_DB_PASSWORD: ${DJANGO_DB_PASSWORD:-reelsift-dev}
+      DJANGO_DB_HOST: db
+      HF_HOME: /models
+      # Model /models önbelleğinden yüklenir; Hub'a istek atılmaz.
+      HF_HUB_OFFLINE: "1"
+      # Açılışta arama modelleri arka planda yüklenir ("Arama hazır" logu). uvicorn --reload her kod
+      # değişiminde süreci yeniden başlattığı için her değişimden sonra yeniden ısınır.
+      SEARCH_WARMUP: "1"
+    volumes:
+      - ./app/backend:/app
+      - ${DATA_DIR:-./veri}:/data:ro
+      - ${MODELS_DIR:-./modeller}:/models
+      # Kelime araması indeksi ve değerlendirme çıktıları; imaj yeniden kurulsa da kalır.
+      - search_index:/index
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build: ./app/frontend
+    environment:
+      VITE_API_PROXY: http://backend:8000
+    volumes:
+      - ./app/frontend:/app
+      - /app/node_modules
+    ports:
+      - "127.0.0.1:5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  search_index:

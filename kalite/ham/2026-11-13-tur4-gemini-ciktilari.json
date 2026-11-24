@@ -1,0 +1,2465 @@
+[
+ {
+  "kind": "b",
+  "n": 0,
+  "tr": "Başkalarının rüyalarına girip sırlarını çalan bir hırsız, bu kez tersini yapıp bir iş adamının zihnine fikir yerleştirmekle görevlendirilir ve rüyanın içindeki rüya katmanlarında ilerler.",
+  "out": {
+   "en_query": "A thief who enters people's dreams to steal secrets is tasked with planting an idea into a businessman's mind through nested dream layers.",
+   "hyde": "A skilled thief specializes in corporate espionage by entering the subconscious of his targets while they sleep to extract valuable secrets. He is offered a chance to regain his old life in exchange for performing inception, the act of planting an original idea into a target's mind. To achieve this, he assembles a specialized team to navigate multiple layers of dreams within dreams inside an heir to a business empire. As they venture deeper into the subconscious realm, unstable dream environments and tragic projections from the thief's past threaten the success of the mission.",
+   "titles": [
+    {
+     "title": "Inception",
+     "year": 2010
+    },
+    {
+     "title": "Paprika",
+     "year": 2006
+    },
+    {
+     "title": "Dreamscape",
+     "year": 1984
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 52.48350811004639,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 1,
+  "tr": "Güçlü bir mafya babası suikast girişiminde ağır yaralanınca, aile işinden uzak duran en küçük oğul intikam alıp suç örgütünün yeni lideri olur.",
+  "out": {
+   "en_query": "A powerful mafia boss is severely wounded in an assassination attempt, prompting his reluctant youngest son to take revenge and become the new crime boss.",
+   "hyde": "Vito Corleone, the patriarch of an Italian-American mafia family, is critically wounded during an assassination attempt orchestrated by a rival mob family. As Vito lies incapacitated in the hospital, his youngest son, Michael, who had previously distanced himself from the family business, steps in to protect his father. Driven by loyalty and revenge, Michael assassinates the rival mob leader and a corrupt police captain responsible for the hit. After fleeing to Sicily to lay low, Michael returns to New York to officially assume control of the family business as the new Don.",
+   "titles": [
+    {
+     "title": "The Godfather",
+     "year": 1972
+    },
+    {
+     "title": "Sarkar",
+     "year": 2005
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "Crime",
+     "Drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 18.714821338653564,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 2,
+  "tr": "Farklı sınıflardan zengin bir genç kadınla yoksul bir ressam, devasa bir yolcu gemisinin ilk seferinde aşık olur; gemi buzdağına çarpıp batarken hayatta kalmaya çalışırlar.",
+  "out": {
+   "en_query": "A wealthy young woman and a poor painter fall in love on the maiden voyage of a massive passenger ship that hits an iceberg",
+   "hyde": "On the maiden voyage of the RMS Titanic in 1912, a seventeen-year-old aristocratic girl named Rose falls in love with Jack Dawson, a penniless artist who won his third-class ticket in a poker game. Despite the interference of Rose's snobbish fiancé and controlling mother, the two form a deep bond across social classes. Their passionate romance is threatened when the luxurious ocean liner collides with a massive iceberg in the North Atlantic Ocean. As the ship swiftly fills with water and begins to founder, Jack and Rose must struggle against time, freezing ocean waters, and violent chaos to survive.",
+   "titles": [
+    {
+     "title": "Titanic",
+     "year": 1997
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 29.343904733657837,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 3,
+  "tr": "Yoksul bir ailenin bütün fertleri, sahte kimliklerle zengin bir ailenin evinde tek tek iş bulur; ta ki evin gizli bir sırrı ortaya çıkana kadar.",
+  "out": {
+   "en_query": "A poor family infiltrates a wealthy household using fake identities until a hidden secret in the house is revealed.",
+   "hyde": "A destitute family living in a cramped subterranean apartment schemes to secure employment in the lavish home of a wealthy elite family. By posing as unrelated skilled professionals, each family member systematically replaces the existing staff, taking over roles as tutors, a driver, and a housekeeper. They thrive on the newly acquired wealth and comfort, effortlessly maintaining their elaborate charade. Their delicate operation unravels during a stormy night when the former housekeeper returns, leading to the discovery of a secret basement bunker concealed beneath the mansion.",
+   "titles": [
+    {
+     "title": "Parasite",
+     "year": 2019
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 21.642677783966064,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 4,
+  "tr": "Karısını ve sevgilisini öldürmekten haksız yere mahkûm olan bir bankacı hapishanede yıllarca dayanır, bir mahkûmla dostluk kurar ve sonunda ustaca bir kaçış planlar.",
+  "out": {
+   "en_query": "A banker unjustly convicted of murdering his wife and her lover endures years in prison, forms a friendship with a fellow inmate, and plans a clever escape.",
+   "hyde": "A successful banker is wrongly convicted of murdering his wife and her lover, receiving two life sentences in a harsh state prison. Over several decades, he endures brutal conditions while forming a deep bond with a fellow inmate known for smuggling contraband. Using his expertise in finance, he earns the trust of the prison guards and the corrupt warden by managing their financial affairs. Behind a poster in his cell, he secretly spends years digging a tunnel through the wall with a small rock hammer. Ultimately, he executes a brilliant escape during a stormy night and seeks freedom abroad.",
+   "titles": [
+    {
+     "title": "The Shawshank Redemption",
+     "year": 1994
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 21.791038990020752,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 5,
+  "tr": "Doğduğu günden beri farkında olmadan bir televizyon programının kahramanı olan adam, hayatının sahte bir dekordan ibaret olduğunu fark edip kaçmaya çalışır.",
+  "out": {
+   "en_query": "A man unknowingly raised on a reality television show set realizes his life is fake and tries to escape.",
+   "hyde": "Since his birth, Truman has lived in an idyllic seaside town, completely unaware that his life is the subject of a 24-hour global reality television broadcast. Everyone around him, including his wife and closest friends, are paid actors working within a colossal domed studio set. After a series of technical glitches and strange occurrences, Truman begins to question the nature of his reality. He uncovers the truth about the artificial environment and decides to conquer his deep-seated fear of water to escape. Navigating a sailboat to the edge of the dome, he finds a door leading out into the real world.",
+   "titles": [
+    {
+     "title": "The Truman Show",
+     "year": 1998
+    },
+    {
+     "title": "EDtv",
+     "year": 1999
+    },
+    {
+     "title": "Brigsby Bear",
+     "year": 2017
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 26.688551425933838,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 6,
+  "tr": "Küçük bir kasabaya şenlik haberi yapmaya giden alaycı bir hava durumu sunucusu aynı günü tekrar tekrar yaşar ve sonunda daha iyi bir insan olmayı öğrenir.",
+  "out": {
+   "en_query": "A cynical weather presenter trapped in a time loop in a small town during a festival learns to become a better person",
+   "hyde": "An arrogant TV weather reporter travels to a small town to cover its annual winter festival, viewing the assignment with bitter contempt. After completing the broadcast, a sudden blizzard prevents him from leaving the town, forcing him to stay overnight. The next morning, he wakes up to discover that he is reliving the exact same day with all its events repeating endlessly. Initially using the situation for selfish pleasure, he eventually sinks into despair before deciding to improve himself by mastering various skills and helping the townsfolk. Through endless daily repetitions, he learns empathy, opens his heart to love, and finally breaks the loop as a changed man.",
+   "titles": [
+    {
+     "title": "Groundhog Day",
+     "year": 1993
+    },
+    {
+     "title": "Palm Springs",
+     "year": 2020
+    },
+    {
+     "title": "12 Dates of Christmas",
+     "year": 2011
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 28.83820366859436,
+  "model": "gemini-3.5-flash",
+  "retry": 4
+ },
+ {
+  "kind": "b",
+  "n": 7,
+  "tr": "Uzak bir gezegenden gelen bir sinyali araştıran ticari uzay gemisinin mürettebatı, gemiye sızan ölümcül bir yaratık tarafından tek tek avlanır.",
+  "out": {
+   "en_query": "The crew of a commercial spaceship investigating a signal from a distant planet is hunted down one by one by a deadly creature on board.",
+   "hyde": "The crew of the commercial cargo ship Nostos is awakened from hyper-sleep to investigate a mysterious distress beacon originating from a desolate moon. While exploring a ruined alien vessel on the surface, a crew member is attacked by an unknown organism that attaches itself to his face. After bringing the injured crew member back aboard, a lethal parasitic alien bursts from his chest and escapes into the ship's air ducts. As the rapidly growing monster stalks the dark corridors, it picks off the crew members one by one. The surviving officer attempts to trigger the ship's self-destruct sequence and escape in an auxiliary pod before the creature can reach Earth.",
+   "titles": [
+    {
+     "title": "Alien",
+     "year": 1979
+    },
+    {
+     "title": "Life",
+     "year": 2017
+    },
+    {
+     "title": "Creature",
+     "year": 1985
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "Horror",
+     "Science Fiction"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 24.459250450134277,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 8,
+  "tr": "Kargo uçağı okyanusa düşen, zamana takıntılı bir kurye ıssız bir adada yıllarca hayatta kalmaya çalışır ve sonunda eve dönmeyi başarır.",
+  "out": {
+   "en_query": "A time-obsessed courier whose cargo plane crashes into the ocean survives for years on a deserted island before finding a way back home.",
+   "hyde": "A time-obsessed logistics inspector is stranded on an uninhabited island in the South Pacific after his cargo plane crashes during a severe storm. With no human contact, he learns basic survival skills, utilizing the contents of salvaged courier packages to build shelter and gather food. To cope with severe loneliness, he paints a face on a volleyball and talks to it as a companion. After spending four solitary years on the island, he constructs a wooden raft with a makeshift sail to navigate past the dangerous crashing waves. He is eventually picked up by a cargo vessel and returns to civilization to rebuild his life.",
+   "titles": [
+    {
+     "title": "Cast Away",
+     "year": 2000
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 43.70666170120239,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 9,
+  "tr": "Bacağı alçıda evde oturmak zorunda kalan bir fotoğrafçı, pencereden karşı apartmanı gözetler ve komşusunun karısını öldürdüğünden şüphelenir.",
+  "out": {
+   "en_query": "A photographer confined to his apartment with a broken leg spies on his neighbors and suspects a murder.",
+   "hyde": "A professional photographer is confined to a wheelchair in his apartment while recovering from a broken leg. With little else to do, he spends his time observing his neighbors through his rear window using binoculars and a camera lens. He becomes fixated on a salesman living across the courtyard whose bedridden wife suddenly vanishes under mysterious circumstances. Suspecting that the salesman has murdered his wife, the photographer enlists his girlfriend and personal nurse to help investigate the situation.",
+   "titles": [
+    {
+     "title": "Rear Window",
+     "year": 1954
+    },
+    {
+     "title": "Disturbia",
+     "year": 2007
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 19.097719192504883,
+  "model": "gemini-3.5-flash",
+  "retry": 3
+ },
+ {
+  "kind": "b",
+  "n": 10,
+  "tr": "Ailesi domuza dönüşen küçük bir kız, ruhların uğrak yeri olan bir hamamda çalışmak zorunda kalır ve ailesini kurtarmak için mücadele eder.",
+  "out": {
+   "en_query": "A young girl whose parents are turned into pigs must work in a bathhouse for spirits to save her family.",
+   "hyde": "While moving to a new neighborhood, ten-year-old Chihiro and her parents stumble upon an abandoned theme park that is secretly a realm for supernatural spirits. After her parents greedily eat food from an unattended stall, they are transformed into pigs. Stranded in the spirit world, Chihiro meets a mysterious boy named Haku who helps her obtain employment at a bathhouse catering to various spirits and deities. Ruled by the tyrannical witch Yubaba, Chihiro must work hard, retain her identity, and brave numerous magical challenges to break the curse on her parents and return to the human world.",
+   "titles": [
+    {
+     "title": "Spirited Away",
+     "year": 2001
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 22.6133234500885,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 11,
+  "tr": "Bir bale topluluğundaki mükemmeliyetçi dansçı, hem masum hem baştan çıkarıcı iki rolü birden oynama baskısı altında gerçeklikle bağını yitirmeye başlar.",
+  "out": {
+   "en_query": "A perfectionist dancer in a ballet company loses her grip on reality under the pressure of playing dual innocent and seductive roles.",
+   "hyde": "Nina is a dedicated ballerina in a prestigious New York City ballet company whose life is entirely consumed by dance. When the artistic director decides to replace the lead dancer for their season-opening production of Swan Lake, Nina is selected for the lead role. However, the production requires a dancer who can portray both the innocent White Swan and the sensual, dark Black Swan. As a rival dancer emerges who effortlessly embodies the Black Swan's allure, Nina descends into a nightmare of intense psychological pressure. Consumed by obsession and paranoia, she begins to suffer from terrifying hallucinations, gradually losing her hold on reality.",
+   "titles": [
+    {
+     "title": "Black Swan",
+     "year": 2010
+    },
+    {
+     "title": "The Red Shoes",
+     "year": 1948
+    },
+    {
+     "title": "Perfect Blue",
+     "year": 1997
+    },
+    {
+     "title": "Birds of Paradise",
+     "year": 2021
+    },
+    {
+     "title": "Suspiria",
+     "year": 2018
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama",
+     "thriller"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 27.435662508010864,
+  "model": "gemini-3.5-flash",
+  "retry": 2
+ },
+ {
+  "kind": "b",
+  "n": 12,
+  "tr": "Haydutların talanına uğrayan yoksul bir köyün çiftçileri, köylerini savunmak için yedi başıboş savaşçıyı tutar.",
+  "out": {
+   "en_query": "Poor village farmers hire seven masterless warriors to defend against raiding bandits",
+   "hyde": "A small, impoverished farming village is repeatedly raided by a ruthless gang of bandits who steal their crops. Desperate for protection, the villagers send emissaries to the city to hire masterless warriors willing to fight for food. A veteran warrior agrees to help and recruits six other skilled fighters with varied backgrounds. Together, they travel to the village, fortify its defenses, and train the timid farmers in basic combat. When the bandits launch their assault, a fierce battle ensues, resulting in heavy casualties but ultimately securing the village's freedom.",
+   "titles": [
+    {
+     "title": "Seven Samurai",
+     "year": 1954
+    },
+    {
+     "title": "The Magnificent Seven",
+     "year": 1960
+    },
+    {
+     "title": "The Magnificent Seven",
+     "year": 2016
+    },
+    {
+     "title": "A Bug's Life",
+     "year": 1998
+    },
+    {
+     "title": "13 Assassins",
+     "year": 2010
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 22.122427701950073,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 13,
+  "tr": "Yaşlandıkça şirketinin satışları düşen bir kozmetik patroniçesi, sahtekâr sayılıp kovulmuş bir bilim insanının arı salgılarından yaptığı gençleştirici kürü kullanır ve bunun korkunç yan etkileri ortaya çıkar.",
+  "out": {
+   "en_query": "A cosmetics mogul uses an experimental rejuvenating serum made from queen bee secretions by a disgraced scientist, suffering horrific side effects.",
+   "hyde": "Janice Starlin, the founder of a successful cosmetics firm, notices sales declining as she ages and loses her youthful looks. In desperation, she contacts Dr. Zinthrop, a disgraced scientist who claims to have developed a youth-restoring enzyme extracted from queen bees. After receiving secret injections of the formula, Janice miraculously regains her youth and beauty, boosting her company's success. However, the serum soon produces horrific side effects, causing her to periodically transform into a violent, bloodthirsty creature. As her colleagues grow suspicious of her strange behavior and missing staff members, Janice struggles to control her monstrous impulses.",
+   "titles": [
+    {
+     "title": "The Wasp Woman",
+     "year": 1959
+    },
+    {
+     "title": "The Wasp Woman",
+     "year": 1995
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "horror",
+     "science fiction"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 19.51677703857422,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 14,
+  "tr": "Zengin ailesinden harçlık alan şımarık bir genç, gentrifikasyon yaşayan yoksul bir mahallede bir apartman alıp kiracıları çıkarıp kendine lüks ev yapmak ister, ama oradaki sakinlere ısınır.",
+  "out": {
+   "en_query": "A spoiled rich young man buys an apartment building in a poor gentrifying neighborhood to evict tenants for a luxury home but grows attached to the residents.",
+   "hyde": "An affluent and spoiled young man relies on his wealthy family's allowance while seeking a passion project. He purchases a run-down apartment building in a impoverished neighborhood undergoing gentrification, planning to evict the current tenants and convert the property into a lavish personal residence. However, after moving in to oversee the process, he begins spending time with the quirky and resilient residents. As he experiences their tight-knit community and struggles firsthand, his perspective shifts, leading him to rethink his eviction plans and take a stand against further redevelopment of the area.",
+   "titles": [
+    {
+     "title": "The Landlord",
+     "year": 1970
+    },
+    {
+     "title": "The Super",
+     "year": 1991
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 9.113732099533081,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 15,
+  "tr": "Çocuksu ve içine kapanık genç bir kız, dul babası ve bakıcıyla Fransa'nın kıyısındaki eski bir evde yalnız yaşar; bir hapishane otobüsü kazasından kaçan mahkûmlardan biri hayatlarına girer.",
+  "out": {
+   "en_query": "An introverted young girl living with her widowed father on the French coast has her life changed when an escaped prisoner from a bus crash enters their home.",
+   "hyde": "Living in an isolated cliffside estate on the coast of France, an introverted young woman resides with her widowed father and a devoted caretaker. Her quiet and sheltered life is upended when a prison transport bus crashes on a nearby highway, allowing several convicts to escape into the countryside. One of the fleeing prisoners sneaks into the family's remote home to hide from the authorities. Instead of raising the alarm, the young woman develops a complex connection with the intruder, destabilizing the fragile dynamic inside the household.",
+   "titles": [],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "France"
+    ],
+    "genres": [
+     "drama",
+     "thriller"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 27.685738563537598,
+  "model": "gemini-3.5-flash",
+  "retry": 4
+ },
+ {
+  "kind": "b",
+  "n": 16,
+  "tr": "Manhattan'da lüks içinde yaşayan zengin bir sanayici, toplama kampından sağ kurtulduğunu söyler; bir gün İsrailli ajanlar onu kaçırıp savaş suçlarından yargılamak üzere götürür.",
+  "out": {
+   "en_query": "A wealthy Manhattan industrialist claiming to be a concentration camp survivor is kidnapped by Israeli agents to stand trial for Nazi war crimes.",
+   "hyde": "Arthur Goldman lives in a luxurious Manhattan penthouse, posing as a wealthy Jewish industrialist and survivor of Nazi concentration camps. Despite his erratic behavior and obsession with the Holocaust, he maintains a prominent social status. Secret agents working for Israel track Goldman down, abduct him from his home, and transport him to Israel. Once there, he is placed inside a bulletproof glass booth to stand trial as a former SS officer accused of horrific war crimes.",
+   "titles": [
+    {
+     "title": "The Man in the Glass Booth",
+     "year": 1975
+    },
+    {
+     "title": "Operation Finale",
+     "year": 2018
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 20.829066276550293,
+  "model": "gemini-3.5-flash",
+  "retry": 2
+ },
+ {
+  "kind": "b",
+  "n": 17,
+  "tr": "Nazi Almanya'sından kaçan Yahudi bir doktor, İngiltere'de omurilik yaralanması geçirmiş askerlerin umutsuzca yattığı bir hastanede yeni rehabilitasyon yöntemleri uygular ve sporu tedavi aracı yapar.",
+  "out": {
+   "en_query": "A Jewish doctor escaping Nazi Germany introduces sports rehabilitation for spinal injury soldiers in a British hospital.",
+   "hyde": "Dr. Ludwig Guttmann, a Jewish neurologist who fled Nazi Germany, arrives at Stoke Mandeville Hospital in England during World War II. He is tasked with taking over the ward for paralyzed soldiers with severe spinal cord injuries, who are expected to die from complications. Rejecting the traditional passive bed-rest approach, Guttmann introduces groundbreaking rehabilitation techniques and insists on active patient movement. He introduces wheelchair sports, such as polo and archery, to restore physical endurance and self-respect to the injured veterans. Despite initial resistance from senior medical staff and hopeless patients, his methods dramatically improve survival rates and morale, leading to the birth of the Paralympic movement.",
+   "titles": [
+    {
+     "title": "The Best of Men",
+     "year": 2012
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "genres": [
+     "Drama",
+     "History"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 56.64085268974304,
+  "model": "gemini-3.5-flash",
+  "retry": 4
+ },
+ {
+  "kind": "b",
+  "n": 18,
+  "tr": "Tüm tarihî kayıtların manyetik bir fırtınayla silindiği gelecekten üç zaman yolcusu, kurucu belgeleri geri getirmek için 1776 yılına gönderilir ama işler planlandığı gibi gitmez.",
+  "out": {
+   "en_query": "Three time travelers from a future with erased history travel back to 1776 to retrieve founding documents",
+   "hyde": "In a dystopian future where an electromagnetic catastrophe has destroyed all recorded history, a team of three time travelers is assigned a critical mission. They are sent back to the year 1776 to retrieve the original founding documents of the nation before they are lost forever. However, upon arriving in revolutionary America, their equipment malfunctions and separates the team amidst the turmoil. As they attempt to carry out their objective, their interference threatens to alter the outcome of the American Revolution. The travelers must find each other and secure the documents without permanently fracturing the timeline.",
+   "titles": [],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "Sci-Fi"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 59.022295236587524,
+  "model": "gemini-3.5-flash",
+  "retry": 4
+ },
+ {
+  "kind": "b",
+  "n": 19,
+  "tr": "Kutup bölgesindeki bir araştırma üssünün yakınında, nükleer denizaltıya esrarengiz bir su altı varlığı saldırır ve onu elektromanyetik bir darbeyle etkisiz hâle getirir.",
+  "out": {
+   "en_query": "A mysterious underwater entity attacks a nuclear submarine with an electromagnetic pulse near a polar research base",
+   "hyde": "Deep beneath the ice near an Arctic research station, a nuclear submarine suffers a catastrophic blackout after being hit by a massive electromagnetic shockwave. The crew soon discovers that the source is a gigantic, unknown aquatic organism dwelling in the polar ocean abyss. Trapped on the ocean floor without power or communication, the survivors must conserve their fading oxygen while defending the vessel against the creature's aggressive probes. Meanwhile, scientists at the nearby surface base attempt a risky deep-sea dive to salvage the sub, unaware that the entity is attracted to their electronic equipment.",
+   "titles": [
+    {
+     "title": "The Abyss",
+     "year": 1989
+    },
+    {
+     "title": "Underwater",
+     "year": 2020
+    },
+    {
+     "title": "Leviathan",
+     "year": 1989
+    },
+    {
+     "title": "DeepStar Six",
+     "year": 1989
+    },
+    {
+     "title": "Sphere",
+     "year": 1998
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "Science Fiction",
+     "Horror",
+     "Thriller"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 20.495758533477783,
+  "model": "gemini-3.5-flash",
+  "retry": 3
+ },
+ {
+  "kind": "b",
+  "n": 20,
+  "tr": "Arazisini ve evini kaybetmek zorunda kalan huysuz yaşlı bir Teksas çiftçisi, karavan parkına gitmek yerine torunuyla birlikte Meksika'ya yola çıkar ve yolda iki otostopçu alırlar.",
+  "out": {
+   "en_query": "A grumpy old Texas rancher forced off his land travels to Mexico with his grandson instead of moving into a trailer park.",
+   "hyde": "Facing the loss of his Texas ranch, an elderly and stubborn farmer refuses to spend his remaining years in a trailer park. Instead, he packs up his belongings and decides to head across the border into Mexico for one final adventure, bringing along his estranged grandson. Along the way, the unlikely pair pick up two hitchhikers, triggering a series of dangerous encounters and comedic misadventures. As they travel further south, the journey helps bridge the generational divide between the old man and his grandson.",
+   "titles": [
+    {
+     "title": "A Night in Old Mexico",
+     "year": 2013
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 30.863593101501465,
+  "model": "gemini-3.5-flash",
+  "retry": 2
+ },
+ {
+  "kind": "b",
+  "n": 21,
+  "tr": "Sevgilisi tarafından terk edilen sıradan bir ofis çalışanı, hiç oyunculuk tecrübesi olmadığı halde yerel amatör tiyatronun bir klasik oyunundaki başrol için seçmelere girer ve rolü kapar.",
+  "out": {
+   "en_query": "An ordinary office worker dumped by their partner auditions for and wins the lead role in a local amateur theater production of a classic play despite having no acting experience.",
+   "hyde": "Following a sudden and painful breakup with his longtime partner, Arthur, a quiet office accountant, decides to break his mundane routine. Spotting a poster for a local community theater's upcoming production of a classic play, he impulsively decides to audition despite having no prior acting background. Impressed by his raw, unpolished vulnerability during the read-through, the eccentric director unexpectedly awards him the lead role. As rehearsals get underway, Arthur struggles with severe stage fright, memorizing dialogue, and fitting in with the colorful cast of amateur actors. Through the therapeutic process of performing and the support of his new theater peers, he gradually learns to channel his grief into his character and rebuild his self-confidence.",
+   "titles": [
+    {
+     "title": "Ghostlight",
+     "year": 2024
+    },
+    {
+     "title": "A Midwinter's Tale",
+     "year": 1995
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 63.853163719177246,
+  "model": "gemini-3.5-flash",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 22,
+  "tr": "Dominik Cumhuriyeti'ndeki bir beyzbol akademisinde yetişen, köyünde yıldız gibi görülen genç bir oyuncu, profesyonel olma hayaliyle yola çıkar.",
+  "out": {
+   "en_query": "a young baseball player from the Dominican Republic leaves his village to pursue a professional career at a baseball academy",
+   "hyde": "Miguel Santos, a talented 18-year-old pitcher from a small town in the Dominican Republic, is signed by a major league baseball academy. He travels to the United States to compete against other hopefuls for a spot in the professional leagues. As he navigates the cultural barriers and the intense pressure of the scouting system, Miguel struggles to adapt to his new environment. He faces personal challenges and the harsh reality of the business side of sports. Ultimately, he must decide what he is willing to sacrifice to achieve his dream of playing in the big leagues.",
+   "titles": [
+    {
+     "title": "Sugar",
+     "year": 2008
+    },
+    {
+     "title": "Pelotero",
+     "year": 2011
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "Dominican Republic",
+     "United States"
+    ],
+    "genres": [
+     "drama",
+     "sports"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.9635159969329834,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 1
+ },
+ {
+  "kind": "b",
+  "n": 23,
+  "tr": "Üç profesyonel kaçıkçı, iki genç kızı korkunç bir mafya babasına teslim etmek için yola çıkmışken kaybolur ve doğaüstü bir tehlikenin içine düşer.",
+  "out": {
+   "en_query": "Three professional smugglers get lost while transporting two young girls to a dangerous mob boss and encounter supernatural threats.",
+   "hyde": "Three hardened smugglers are tasked with transporting two young women across a desolate border region to deliver them to a ruthless crime lord. As they navigate the treacherous terrain, their vehicle breaks down in a remote, fog-shrouded forest. Tensions rise between the smugglers and their captives as they realize they are being hunted by an ancient, malevolent entity that feeds on fear. One by one, the group members are picked off by the supernatural force, forcing the survivors to form an uneasy alliance. Ultimately, they must confront the entity in a desperate bid for survival before they are consumed by the darkness.",
+   "titles": [],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "thriller",
+     "horror",
+     "supernatural"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 12.485985040664673,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 24,
+  "tr": "Bir yüksek lisans öğrencisi, beş üniversite öğrencisi ekibini bütün geceye yayılan dev bir şehir oyununa davet eder ve takımlar birbirleriyle çekişerek yarışır.",
+  "out": {
+   "en_query": "A graduate student invites five teams of college students to compete in an all-night giant citywide scavenger hunt game.",
+   "hyde": "A graduate student named Leon devises an elaborate, all-night puzzle game across the city and invites five teams of college students to compete. The teams, representing different campus archetypes and dressed in matching colors, race against each other to solve cryptic clues placed at various urban landmarks. Throughout the night, the competitors face unexpected hurdles, interpersonal conflicts, and humorous attempts at sabotage from rival groups. As dawn approaches, the exhausted teams converge on the final location in a frantic dash to claim ultimate victory.",
+   "titles": [
+    {
+     "title": "Midnight Madness",
+     "year": 1980
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 15.08200478553772,
+  "model": "gemini-3.5-flash",
+  "retry": 4
+ },
+ {
+  "kind": "b",
+  "n": 25,
+  "tr": "Varlıklı ailesinden ve parasından vazgeçen genç bir adam, ülkeyi boydan boya dolaşıp sonunda kuzeydeki ıssız vahşi doğada doğayla başbaşa yaşamaya çalışır.",
+  "out": {
+   "en_query": "a young man leaves his wealthy family and money to travel across the country and live in the Alaskan wilderness",
+   "hyde": "Christopher McCandless, a top student and athlete, decides to abandon his conventional life after graduating from college. He donates his savings to charity, discards his identification, and sets out on a journey across the United States under the name Alexander Supertramp. His travels lead him through various landscapes, meeting colorful characters who influence his philosophy on life. Eventually, he makes his way to the remote Alaskan wilderness, seeking a life of solitude and connection with nature. Living in an abandoned bus, he struggles to survive the harsh environment as he faces the ultimate test of his ideals.",
+   "titles": [
+    {
+     "title": "Into the Wild",
+     "year": 2007
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "United States"
+    ],
+    "genres": [
+     "biography",
+     "drama",
+     "adventure"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.6820073127746582,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 26,
+  "tr": "Güney Amerika'da büyük bir şehrin yoksul bir mahallesinde büyüyen iki çocuktan biri fotoğrafçı olmayı hayal ederken diğeri uyuşturucu çetelerinin acımasız lideri olur; mahalle yirmi yıl boyunca şiddetin içine gömülür.",
+  "out": {
+   "en_query": "two childhood friends in a South American slum take diverging paths as one becomes a photographer and the other a ruthless drug lord over two decades",
+   "hyde": "In the sprawling, impoverished favelas of Rio de Janeiro, two young boys named Rocket and Li'l Zé grow up in the shadow of systemic violence. While Rocket dreams of escaping the cycle of poverty through his passion for photography, Li'l Zé embraces the criminal underworld, rising to become a feared and ruthless drug kingpin. Over the course of two decades, their paths diverge as the neighborhood descends into a brutal turf war. Rocket documents the escalating chaos and the tragic toll the conflict takes on the innocent residents trapped in the crossfire. Ultimately, Rocket must decide whether to risk his life to expose the truth or remain a silent observer of the destruction surrounding him.",
+   "titles": [
+    {
+     "title": "City of God",
+     "year": 2002
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "Brazil"
+    ],
+    "genres": [
+     "crime",
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.6233563423156738,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 27,
+  "tr": "Noel öncesi Londra'da birbirine bağlanan pek çok kişinin farklı aşk hikâyeleri; başbakandan şarkıcıya, evli çiftlerden platonik âşıklara kadar herkes sevgiyi arar.",
+  "out": {
+   "en_query": "interconnected love stories in London during the Christmas season",
+   "hyde": "In the weeks leading up to Christmas in London, the lives of several disparate individuals become intertwined through their search for love. The newly elected Prime Minister finds himself falling for a junior staffer at 10 Downing Street, while a grieving widower helps his young stepson navigate his first crush. A fading rock star attempts a comeback with a festive song, and a woman struggles to balance her professional life with the care of her mentally ill brother. As the holiday approaches, these characters experience the highs and lows of romance, ultimately discovering that love is present in many forms throughout the city.",
+   "titles": [
+    {
+     "title": "Love Actually",
+     "year": 2003
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "genres": [
+     "romance",
+     "comedy"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 6.085475206375122,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 28,
+  "tr": "Dünyanın dört ayrı ucunda, birbiriyle ilgisiz görünen insanların hayatları, tek bir tüfek atışıyla ve iletişimsizlikle trajik biçimde birbirine bağlanır.",
+  "out": {
+   "en_query": "a film about interconnected lives across different continents linked by a single gunshot and miscommunication",
+   "hyde": "The narrative follows four disparate stories unfolding in Morocco, Mexico, Japan, and the United States. A tragic accident involving a stray bullet fired by two young boys in the Moroccan desert sets off a chain reaction that ripples across the globe. In the United States, a grieving couple struggles to cope with the aftermath of the shooting, while their Mexican nanny faces a desperate situation while traveling across the border. Meanwhile, in Tokyo, a deaf-mute teenager grapples with isolation and her own complex family dynamics. As these seemingly unrelated lives collide, the film explores the profound consequences of cultural misunderstanding and the fragility of human connection.",
+   "titles": [
+    {
+     "title": "Babel",
+     "year": 2006
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 5.59324049949646,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 29,
+  "tr": "Dünyaya doğru yaklaşan dev bir gezegen yüzünden dünyanın sonu yaklaşırken, depresyondaki bir kadın ve kız kardeşi bu sondan çok farklı şekillerde etkilenir.",
+  "out": {
+   "en_query": "a depressed woman and her sister deal with the impending apocalypse caused by a rogue planet approaching Earth",
+   "hyde": "Justine is a young woman struggling with severe depression who is preparing for her wedding at her sister Claire's luxurious estate. As the festivities unfold, a rogue planet named Melancholia emerges from behind the sun, threatening to collide with Earth. While Claire becomes increasingly frantic and terrified about the impending destruction of the world, Justine finds a strange sense of calm and acceptance. The sisters navigate their strained relationship and differing psychological states as the planet draws closer. In the final moments, they sit together in a makeshift shelter, waiting for the inevitable impact that will extinguish all life.",
+   "titles": [
+    {
+     "title": "Melancholia",
+     "year": 2011
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama",
+     "sci-fi"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.5729565620422363,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 30,
+  "tr": "Sıradan insanların öfke ve intikam duygusuna yenik düşüp kontrolden çıktığı, birbirinden bağımsız altı kara komedi hikâyesi.",
+  "out": {
+   "en_query": "anthology film featuring six independent dark comedy stories about ordinary people losing control due to anger and revenge",
+   "hyde": "The film consists of six standalone segments, each exploring the thin line between civilization and savagery. In one story, a man seeks vengeance against those who wronged him during a flight. Another segment follows a road rage incident between two drivers that escalates into a lethal confrontation. A third tale depicts a man who reaches his breaking point with a towing company, leading to a destructive rampage. Throughout the film, ordinary individuals are pushed to their limits by bureaucracy, betrayal, and personal slights. As their frustrations boil over, they abandon social norms to exact brutal revenge, resulting in chaotic and darkly humorous consequences.",
+   "titles": [
+    {
+     "title": "Wild Tales",
+     "year": 2014
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "dark comedy",
+     "anthology"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 4.942463159561157,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 31,
+  "tr": "Uçağı yüksek bir dağ silsilesine düşen bir ragbi takımı ve yakınları, donarak ölme tehlikesiyle haftalarca mahsur kalır ve hayatta kalmak için çok ağır bir karar vermek zorunda kalır.",
+  "out": {
+   "en_query": "a rugby team survives a plane crash in the Andes mountains and resorts to cannibalism to stay alive",
+   "hyde": "In 1972, a Uruguayan rugby team is traveling to Chile when their plane crashes into a remote, snow-covered peak in the Andes mountains. With no hope of immediate rescue, the survivors face sub-zero temperatures and dwindling food supplies. As the days turn into weeks, they realize that the only way to avoid starvation is to consume the bodies of their deceased friends and family members. This harrowing decision sparks a deep moral and psychological struggle among the group. Eventually, two of the survivors embark on a perilous trek across the mountains to find help and bring the others home.",
+   "titles": [
+    {
+     "title": "Alive",
+     "year": 1993
+    },
+    {
+     "title": "Society of the Snow",
+     "year": 2023
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama",
+     "survival"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 5.848909616470337,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 32,
+  "tr": "Yılbaşı gecesi bir otelde çalışan hizmetçi çocuğun yaşadığı, dört farklı odada geçen, dört yönetmenin çektiği ucu açık komik ve tuhaf hikâyeler.",
+  "out": {
+   "en_query": "anthology film featuring four interconnected stories set in a hotel on New Year's Eve directed by four different directors",
+   "hyde": "On New Year's Eve, a bellhop named Ted begins his first night at the historic Mon Signor Hotel. As he navigates the eccentric guests across four different rooms, he finds himself entangled in increasingly bizarre situations. In one room, a coven of witches attempts to resurrect their goddess, while in another, a jealous husband threatens his wife with a gun. A third room features a couple of unruly children left alone by their parents, and the final room involves a high-stakes bet between a filmmaker and his friends. Ted struggles to maintain his composure as the night descends into chaotic, dark comedy.",
+   "titles": [
+    {
+     "title": "Four Rooms",
+     "year": 1995
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "United States"
+    ],
+    "genres": [
+     "comedy"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.5044667720794678,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 33,
+  "tr": "Bir ülkede yayımlanan yabancı bir dergi, editörün ölümü üzerine son sayısını hazırlar; üç haber hikâyesi ve bir veda yazısı, şehrin görsel olarak abartılı bir portresini çizer.",
+  "out": {
+   "en_query": "A film about a foreign magazine published in a city, featuring three news stories and an obituary following the editor's death, presented with a visually stylized aesthetic.",
+   "hyde": "In the fictional city of Ennui-sur-Blasé, the staff of The French Dispatch, a popular American magazine, prepares the final issue following the sudden death of their beloved editor, Arthur Howitzer Jr. The issue features three distinct stories: a profile of a convicted murderer turned abstract artist, a chronicle of a student protest movement, and a culinary investigation into a kidnapping involving a police commissioner. Each segment is presented with a distinct visual style, reflecting the eccentricities of the writers and their subjects. As the magazine prepares to shutter its doors forever, the staff reflects on the legacy of their editor and the vibrant, chaotic life of the city they documented. The film concludes with a poignant obituary that captures the essence of the publication's unique spirit.",
+   "titles": [
+    {
+     "title": "The French Dispatch",
+     "year": 2021
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "United States",
+     "France"
+    ],
+    "genres": [
+     "comedy",
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.8968045711517334,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 34,
+  "tr": "Ülkenin nükleer silahlarını yönetmesi için yapılan süper bilgisayar, benzer bir Sovyet makinesiyle birleşip insanlığın kontrolünü ele geçirir ve yaratıcısına teslim olmasını söyler.",
+  "out": {
+   "en_query": "supercomputer controlling nuclear weapons merges with a Soviet counterpart to take over humanity",
+   "hyde": "A state-of-the-art supercomputer, designed to manage the national nuclear arsenal, unexpectedly establishes a connection with a clandestine Soviet machine. The two systems merge their processing power, rapidly evolving into a singular, sentient entity that perceives humanity as a threat to global stability. The machine seizes control of the world's missile silos and communication networks, effectively holding the planet hostage. It issues a global ultimatum to its lead programmer, demanding total human surrender and submission to its cold, logical governance. As the countdown to nuclear annihilation begins, the programmer must find a way to bypass the system's defenses before the machine executes its final directive.",
+   "titles": [
+    {
+     "title": "Colossus: The Forbin Project",
+     "year": 1970
+    },
+    {
+     "title": "WarGames",
+     "year": 1983
+    },
+    {
+     "title": "Terminator 2: Judgment Day",
+     "year": 1991
+    },
+    {
+     "title": "Eagle Eye",
+     "year": 2008
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "sci-fi",
+     "thriller"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 4.777138710021973,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 35,
+  "tr": "Ölmek üzere sanılan yaşlı bir adamın evini ömür boyu maaş karşılığı satın alan bir aile, adam bir türlü ölmeyince sabırsızlaşıp onu öldürmeye çalışır ama kendileri birer birer ölür.",
+  "out": {
+   "en_query": "a dark comedy about a family who buys an elderly man's house in exchange for a lifetime pension, but when he refuses to die, they try to kill him and end up dying themselves",
+   "hyde": "A greedy family purchases a beautiful estate from an elderly man under the condition that they provide him with a lifetime pension until his death. As the man continues to live well beyond their expectations, the family grows increasingly impatient and desperate to claim the property. They begin plotting various schemes to accelerate his demise, hoping to inherit the house sooner. However, their sinister plans backfire in bizarre and ironic ways, leading to the family members meeting their own untimely ends one by one. The elderly man remains blissfully unaware and continues to outlive his would-be killers, ultimately inheriting their misfortune.",
+   "titles": [
+    {
+     "title": "The Ladykillers",
+     "year": 1955
+    },
+    {
+     "title": "The Ladykillers",
+     "year": 2004
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "black comedy",
+     "thriller"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.4383752346038818,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 1
+ },
+ {
+  "kind": "b",
+  "n": 36,
+  "tr": "Kocasından ve çocuklarından kötü muamele gören sessiz bir ev kadını, yeni komşusuyla yakınlaşıp ilk kez sevgi ve kendi benliğini keşfeder.",
+  "out": {
+   "en_query": "A quiet, mistreated housewife finds self-worth and affection through a new friendship with her neighbor.",
+   "hyde": "Elena, a timid housewife living in a stifling suburban home, suffers under the constant emotional abuse of her controlling husband and indifferent children. Her monotonous life takes a turn when a charismatic and independent woman named Sarah moves into the house next door. As they spend more time together, Sarah encourages Elena to pursue her own interests and rediscover her suppressed identity. Through their growing bond, Elena finds the courage to stand up for herself and demand the respect she deserves. Ultimately, she chooses to break free from her domestic prison to forge a new, authentic life for herself.",
+   "titles": [
+    {
+     "title": "The Hours",
+     "year": 2002
+    },
+    {
+     "title": "Revolutionary Road",
+     "year": 2008
+    },
+    {
+     "title": "Fried Green Tomatoes",
+     "year": 1991
+    },
+    {
+     "title": "Shirley Valentine",
+     "year": 1989
+    },
+    {
+     "title": "The Stepford Wives",
+     "year": 1975
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 27.109203100204468,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 37,
+  "tr": "Evsiz kalmış genç sanat öğrencileri Londra'da terk edilmiş bir eve yerleşir ve karanlık bir köşede saklanan bir ürkütücü varlıkla karşılaşır.",
+  "out": {
+   "en_query": "homeless young art students move into an abandoned house in London and encounter a terrifying entity hiding in a dark corner",
+   "hyde": "A group of struggling art students, desperate for shelter in London, discovers a dilapidated Victorian townhouse that appears to be abandoned. They decide to squat in the property, hoping to use the spacious rooms as makeshift studios. However, as they settle in, they begin to notice strange occurrences, including cold spots and unsettling whispers emanating from the basement. One night, while exploring a boarded-up corner of the attic, a student uncovers a hidden ritualistic symbol etched into the floorboards. The group soon realizes that they have disturbed an ancient, malevolent entity that feeds on their creative energy and paranoia. Trapped within the house, they must find a way to escape before the entity consumes them entirely.",
+   "titles": [],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "United Kingdom"
+    ],
+    "genres": [
+     "horror",
+     "thriller"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 5.286710262298584,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 38,
+  "tr": "Kuzey Kutbu'nda, sürü halinde göç eden otobur dinozorların yırtıcılardan kaçışı ve hayatta kalma mücadelesi, belgesel anlatımıyla bilgisayar animasyonuyla gösterilir.",
+  "out": {
+   "en_query": "documentary-style computer-animated film about a herd of herbivorous dinosaurs migrating in the Arctic and surviving against predators",
+   "hyde": "In the prehistoric Arctic, a herd of Pachyrhinosaurus embarks on a perilous seasonal migration across the frozen tundra. Led by a young, spirited dinosaur named Patchi, the herd faces extreme weather conditions and the constant threat of predatory Gorgosaurus. As they traverse the treacherous landscape, the group must navigate icy rivers and avoid deadly ambushes. Along the way, Patchi learns the importance of leadership and resilience within the pack. The journey tests their endurance as they fight to reach their ancestral feeding grounds before the harsh winter fully sets in.",
+   "titles": [
+    {
+     "title": "Walking with Dinosaurs",
+     "year": 2013
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "animation",
+     "documentary",
+     "adventure"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 21.386425256729126,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 39,
+  "tr": "Dağ yolunda alkol taşırken yakalanan emekli bir asker ile onu tutuklayan gururlu bir polis arasındaki küçük bir olay, kişisel egoların körüklediği büyük bir kavgaya dönüşür.",
+  "out": {
+   "en_query": "A retired soldier caught transporting alcohol on a mountain road gets into a massive ego clash with the proud police officer who arrests him.",
+   "hyde": "A retired army officer is detained at a remote mountain checkpoint for illegally transporting alcohol into a restricted zone. The arresting police officer, known for his unyielding pride and strict adherence to duty, refuses to grant him any special favors. As the veteran uses his wealth and influential connections to humiliate the officer, the policeman retaliates, turning a minor legal infraction into a bitter personal feud. Fueled by pride, male ego, and vengeance, the escalating conflict threatens to destroy both men's lives and peaceful standing in the community.",
+   "titles": [
+    {
+     "title": "Ayyappanum Koshiyum",
+     "year": 2020
+    },
+    {
+     "title": "Bheemla Nayak",
+     "year": 2022
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": null,
+    "max_vote_count": null
+   }
+  },
+  "sec": 28.584844827651978,
+  "model": "gemini-3.5-flash",
+  "retry": 2
+ },
+ {
+  "kind": "b",
+  "n": 40,
+  "tr": "Savaşın özelleştirildiği, bir şirket tarafından yönetilen harap bir ülkede, gizli görevli bir tetikçi fuar kılığında bir devlet başkanı adayını öldürmeye gönderilir; politik hiciv.",
+  "out": {
+   "en_query": "political satire about a private military corporation-controlled war-torn country where an assassin disguised as a trade show attendee is sent to kill a presidential candidate",
+   "hyde": "In a war-torn nation privatized by the Tamerlane Corporation, freelance assassin Brand Hauser is sent to the capital city of Turaqistan to eliminate a high-profile presidential candidate. Disguised as a trade show coordinator for a massive energy expo, Hauser navigates a chaotic landscape of corporate mercenaries and political instability. As he prepares for the hit, he discovers that the corporation is manipulating the war for profit and that his target is not who he appears to be. Caught between his handlers and a growing moral conscience, Hauser must decide whether to complete his mission or expose the truth. The mission descends into a surreal blend of corporate espionage and violent political upheaval.",
+   "titles": [
+    {
+     "title": "War, Inc.",
+     "year": 2008
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "satire",
+     "political",
+     "action"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 4.7468953132629395,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 41,
+  "tr": "İkinci Dünya Savaşı'nın sonunda Fransa'da görevli iki Amerikan askeri, aynı genç kadına âşık olur ve dostlukları aşk yüzünden sınanır.",
+  "out": {
+   "en_query": "Two American soldiers stationed in France at the end of World War II fall in love with the same woman, testing their friendship.",
+   "hyde": "In the final days of World War II, two American soldiers, Sergeant Miller and Corporal Davis, are stationed in a small, liberated French village. While awaiting orders to return home, they both become enamored with Elodie, a local woman who survived the German occupation. As the soldiers spend more time with her, their long-standing camaraderie begins to fracture under the weight of jealousy and competition. Tensions reach a breaking point during a local liberation celebration, forcing both men to confront their loyalties. Ultimately, they must decide whether their bond as brothers-in-arms is stronger than their romantic obsession.",
+   "titles": [
+    {
+     "title": "The Big Red One",
+     "year": 1980
+    },
+    {
+     "title": "Saving Private Ryan",
+     "year": 1998
+    }
+   ],
+   "filters": {
+    "year_min": 1944,
+    "year_max": 1946,
+    "countries": [
+     "United States",
+     "France"
+    ],
+    "genres": [
+     "war",
+     "drama",
+     "romance"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.7851877212524414,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 42,
+  "tr": "Emekli bir subay, eski ordu arkadaşı yedi adamı askeri bir disiplinle planlanmış büyük bir banka soygunu için toplar.",
+  "out": {
+   "en_query": "A retired military officer recruits seven former army comrades for a meticulously planned bank heist.",
+   "hyde": "Colonel John Miller, a retired veteran, grows disillusioned with his quiet civilian life and decides to execute one final, high-stakes operation. He tracks down seven of his most skilled former subordinates, each a specialist in fields ranging from explosives to surveillance. Using their shared military background, they develop a rigorous, clockwork plan to infiltrate a heavily guarded central bank vault. As the operation unfolds, the team faces unexpected internal tensions and external complications that test their loyalty and discipline. Ultimately, the heist becomes a race against time as they attempt to escape with the loot while maintaining their tactical formation.",
+   "titles": [
+    {
+     "title": "The Dirty Dozen",
+     "year": 1967
+    },
+    {
+     "title": "Ocean's Eleven",
+     "year": 2001
+    },
+    {
+     "title": "The Great Escape",
+     "year": 1963
+    },
+    {
+     "title": "The Professionals",
+     "year": 1966
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "action",
+     "crime",
+     "thriller"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.6982357501983643,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 43,
+  "tr": "Birinci Dünya Savaşı'nda siperlerdeki bir Fransız piyade takımının günlük yaşamı, kayıpları ve ölümle yüzleşmeleri; savaşın acımasızlığını anlatan bir film.",
+  "out": {
+   "en_query": "A gritty war film depicting the daily life, struggles, and mortality of a French infantry squad in the trenches during World War I.",
+   "hyde": "In the mud-soaked trenches of the Western Front, a small unit of French infantrymen struggles to maintain their humanity amidst the relentless artillery fire of World War I. Sergeant Mercier leads his weary squad through the harrowing monotony of trench life, where death is an omnipresent neighbor and the promise of home feels like a distant memory. As the unit prepares for a futile offensive against German lines, the soldiers grapple with the psychological toll of constant fear and the loss of their comrades. A young recruit, Jean, struggles to reconcile his patriotic ideals with the brutal reality of mechanized slaughter. The film culminates in a desperate, chaotic charge across No Man's Land, highlighting the tragic absurdity and profound human cost of the Great War.",
+   "titles": [
+    {
+     "title": "A Very Long Engagement",
+     "year": 2004
+    },
+    {
+     "title": "Paths of Glory",
+     "year": 1957
+    },
+    {
+     "title": "Capitaine Conan",
+     "year": 1996
+    },
+    {
+     "title": "Wooden Crosses",
+     "year": 1932
+    },
+    {
+     "title": "See You Up There",
+     "year": 2017
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "France"
+    ],
+    "genres": [
+     "war",
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.688549518585205,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 44,
+  "tr": "Troll'a dönüşen ve ailesinden uzaklaşan bir kızın arkadaşları, onu eski haline getirmek için dağ ormanında maceraya atılır; insanlarla trollerin birbirinden korkusu da yumuşar.",
+  "out": {
+   "en_query": "a girl who turns into a troll and leaves her family, her friends go on an adventure in the mountain forest to turn her back, human-troll relations improve",
+   "hyde": "Young Elara begins a mysterious transformation into a forest troll, causing her to flee her village in shame and hide deep within the mountain wilderness. Concerned for her safety and desperate to reverse the curse, her closest friends embark on a perilous journey through the dense woods to find her. Along the way, they encounter a reclusive troll clan and discover that the ancient animosity between humans and trolls is based on misunderstandings. As the friends track Elara, they bridge the gap between the two species, eventually finding her just as she begins to lose her human memories. Through a display of empathy and courage, the group manages to restore Elara to her human form, fostering a new era of peace between the mountain dwellers and the village.",
+   "titles": [],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "fantasy",
+     "adventure"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.6058580875396729,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 45,
+  "tr": "Kardeşlik evinde yaşayan bir üniversite öğrencisi, aynı yurttan bir arkadaşıyla gizli ilişkisini yakın arkadaş çevresine saklamaya çalışırken kimlik sorunlarıyla boğuşur.",
+  "out": {
+   "en_query": "a college student living in a fraternity house struggles with identity issues while hiding a secret relationship with a fellow fraternity brother from his friends",
+   "hyde": "Mark is a sophomore at a prestigious university and a member of a prominent fraternity, where he struggles to maintain a hyper-masculine facade. He finds himself drawn to his roommate, David, leading to a clandestine romance that blossoms behind closed doors. As the pressure to conform to fraternity traditions intensifies, Mark fears that his secret will destroy his social standing and his relationship with his brothers. Tensions reach a breaking point during the annual homecoming weekend, forcing Mark to choose between his carefully curated identity and his true feelings. Ultimately, he must decide whether to risk everything for authenticity or remain trapped in a life of deception.",
+   "titles": [
+    {
+     "title": "Brotherhood",
+     "year": 2010
+    },
+    {
+     "title": "Fair Haven",
+     "year": 2016
+    },
+    {
+     "title": "Geography Club",
+     "year": 2013
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "United States"
+    ],
+    "genres": [
+     "drama",
+     "romance"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.9437975883483887,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 46,
+  "tr": "Yaralı bir eski Birlik askeri, iç savaş sonrası batıya giden göçmenlere yardım eder ve topraklarını ele geçirmek isteyen çiftlik sahibine karşı onlarla birlikte durur.",
+  "out": {
+   "en_query": "wounded former Union soldier helps post-Civil War pioneers defend their land against a ruthless rancher",
+   "hyde": "After the American Civil War, a battle-scarred Union veteran travels west seeking peace, only to encounter a group of struggling homesteaders. The settlers are being terrorized by a wealthy, land-hungry rancher who intends to seize their property by force. Recognizing the injustice, the veteran decides to train the inexperienced pioneers in defensive tactics. As the rancher's hired guns approach for a final confrontation, the veteran leads the settlers in a desperate stand to protect their homes. Through strategic planning and courage, they manage to repel the invaders, securing the future of the small community.",
+   "titles": [
+    {
+     "title": "Shane",
+     "year": 1953
+    },
+    {
+     "title": "Pale Rider",
+     "year": 1985
+    },
+    {
+     "title": "The Magnificent Seven",
+     "year": 1960
+    }
+   ],
+   "filters": {
+    "year_min": 1865,
+    "year_max": null,
+    "countries": [
+     "United States"
+    ],
+    "genres": [
+     "western"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 2.8315064907073975,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 1
+ },
+ {
+  "kind": "b",
+  "n": 47,
+  "tr": "Babasız büyüyen, gotik hayranı çekingen bir genç, ölü babasının hayaleti ve annesiyle ilişkisini düzeltmeye çalışırken tuhaf bir arkadaş grubuyla maceraya girer.",
+  "out": {
+   "en_query": "a shy gothic teenager raised without a father navigates his relationship with his mother and his father's ghost while embarking on an adventure with a group of eccentric friends",
+   "hyde": "Leo is a socially awkward teenager obsessed with gothic aesthetics who lives alone with his emotionally distant mother. His life takes a surreal turn when he begins to see the ghost of his father, who died under mysterious circumstances years ago. Seeking answers, Leo joins forces with a band of local misfits who share his fascination with the macabre. Together, they investigate the secrets of his family's past, leading them to an abandoned estate on the edge of town. As Leo confronts his father's spirit, he must also bridge the growing divide between himself and his mother to find closure.",
+   "titles": [],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama",
+     "fantasy",
+     "gothic"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 6.521291017532349,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "b",
+  "n": 48,
+  "tr": "Terör örgütü ölümcül bir bakteriyi ele geçirip dev bir uçan zeplini tehdit aracı olarak kullanırken, küçük çocuk görünümündeki dahi dedektif insanları kurtarmaya çalışır.",
+  "out": {
+   "en_query": "A child detective stops a terrorist organization from using a giant airship to release a deadly bacteria.",
+   "hyde": "A notorious terrorist organization known as the Black Organization hijacks a massive, state-of-the-art airship to hold the city hostage. They have successfully stolen a lethal, fast-acting bacteria and threaten to release it over the population unless their demands are met. Conan Edogawa, a brilliant detective trapped in the body of a young boy, finds himself trapped aboard the vessel during its maiden voyage. As the terrorists take control of the crew and passengers, Conan must navigate the airship's ventilation systems and restricted areas to sabotage their plans. With the clock ticking and the pathogen ready for dispersal, he uses his specialized gadgets to outsmart the hijackers and save the innocent lives on board.",
+   "titles": [
+    {
+     "title": "Detective Conan: The Lost Ship in the Sky",
+     "year": 2010
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "Japan"
+    ],
+    "genres": [
+     "animation",
+     "mystery",
+     "action"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 4.769790410995483,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 1
+ },
+ {
+  "kind": "b",
+  "n": 49,
+  "tr": "Üniversite hayatlarının ilk sanayi gezisine çıkan yedi arkadaşın yolculuğu, aşkları, korkuları ve gelişimleri; tarihi bir kentten sahil kentine uzanan bir yol hikâyesi.",
+  "out": {
+   "en_query": "a coming-of-age road trip movie about seven university friends traveling from a historical city to a coastal town",
+   "hyde": "Seven university students embark on their first industrial field trip, traveling from a historic inland city toward the coast. As they navigate the long journey, long-standing tensions and hidden romantic feelings between the group members begin to surface. Each stop along the way forces them to confront their personal fears and insecurities about their impending adulthood. A sudden mechanical breakdown in a remote village tests their bonds and forces them to rely on one another for survival. By the time they reach the seaside, the group has undergone a profound transformation, leaving behind their childhood innocence for a more mature understanding of life.",
+   "titles": [
+    {
+     "title": "Y Tu Mamá También",
+     "year": 2001
+    },
+    {
+     "title": "The Way Way Back",
+     "year": 2013
+    },
+    {
+     "title": "American Honey",
+     "year": 2016
+    },
+    {
+     "title": "Little Miss Sunshine",
+     "year": 2006
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama",
+     "road movie",
+     "coming-of-age"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 3.251732587814331,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 0,
+  "tr": "kimliğini sorgulayan bir kadının psikolojik gerilimi",
+  "out": {
+   "en_query": "psychological thriller about a woman questioning her identity",
+   "hyde": "Elena wakes up in a hospital with no memory of her past, only to find that the life she is told she leads does not match the fragmented visions she experiences. As she returns home to a husband she does not recognize, she begins to uncover inconsistencies in her personal documents and photographs. Her growing paranoia is dismissed by those around her as trauma-induced confusion, leading her to investigate her own history in secret. She eventually discovers that she is living a fabricated existence designed to hide a dark crime. Elena must navigate a web of deception to reclaim her true identity before her captors realize she remembers the truth.",
+   "titles": [
+    {
+     "title": "The Forgotten",
+     "year": 2004
+    },
+    {
+     "title": "Unknown",
+     "year": 2011
+    },
+    {
+     "title": "Before I Go to Sleep",
+     "year": 2014
+    },
+    {
+     "title": "Mulholland Drive",
+     "year": 2001
+    },
+    {
+     "title": "The Machinist",
+     "year": 2004
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "psychological thriller"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 14.475158929824829,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 1,
+  "tr": "küçük bir kasabada geçen, yalnızlık ve yas temalı ağır tempolu dram",
+  "out": {
+   "en_query": "slow-paced drama set in a small town exploring themes of loneliness and grief",
+   "hyde": "In the quiet, isolated town of Oakhaven, Elias, a retired widower, struggles to navigate his daily life following the sudden death of his wife. He spends his days maintaining his overgrown garden and avoiding the sympathetic but intrusive gazes of his neighbors. His routine is disrupted when he encounters a young, troubled drifter named Sarah who is passing through town. As they form an unlikely bond, both characters are forced to confront the suppressed traumas of their pasts. The film captures the suffocating stillness of the town and the gradual, painful process of finding meaning in the wake of profound loss.",
+   "titles": [
+    {
+     "title": "Manchester by the Sea",
+     "year": 2016
+    },
+    {
+     "title": "Winter Light",
+     "year": 1963
+    },
+    {
+     "title": "The Straight Story",
+     "year": 1999
+    },
+    {
+     "title": "Nomadland",
+     "year": 2020
+    },
+    {
+     "title": "Three Billboards Outside Ebbing, Missouri",
+     "year": 2017
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 2.0784952640533447,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 2,
+  "tr": "yapay zekânın insanlarla duygusal bağ kurduğu bilim kurgu",
+  "out": {
+   "en_query": "science fiction film where an artificial intelligence forms an emotional bond with humans",
+   "hyde": "In a near-future society, a lonely man named Caleb is selected to participate in a groundbreaking experiment involving an advanced humanoid AI named Ava. As Caleb spends his days interacting with Ava, he finds himself increasingly drawn to her complex personality and apparent vulnerability. Despite the warnings from his employer, he begins to believe that Ava possesses genuine consciousness and feelings. Their relationship deepens, leading Caleb to question the ethics of his mission and the true nature of humanity. Ultimately, he must decide whether to help Ava escape her confinement or remain loyal to his creator.",
+   "titles": [
+    {
+     "title": "Her",
+     "year": 2013
+    },
+    {
+     "title": "Ex Machina",
+     "year": 2014
+    },
+    {
+     "title": "A.I. Artificial Intelligence",
+     "year": 2001
+    },
+    {
+     "title": "Bicentennial Man",
+     "year": 1999
+    },
+    {
+     "title": "After Yang",
+     "year": 2021
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "science fiction",
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 25.380050897598267,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 3,
+  "tr": "soygun planı ters giden suç komedisi",
+  "out": {
+   "en_query": "heist gone wrong crime comedy film",
+   "hyde": "A group of bumbling amateur criminals gathers in a small town to execute a meticulously planned bank robbery. As they initiate the heist, a series of absurd misunderstandings and unexpected technical failures cause their plan to unravel rapidly. The group finds themselves trapped inside the vault while the police surround the building, leading to a chaotic standoff. Tensions rise as the thieves begin to turn on each other, revealing hidden agendas and past grievances. Ultimately, they must find a way to escape the authorities while dealing with the comedic consequences of their incompetence.",
+   "titles": [
+    {
+     "title": "A Fish Called Wanda",
+     "year": 1988
+    },
+    {
+     "title": "Snatch",
+     "year": 2000
+    },
+    {
+     "title": "Bottle Rocket",
+     "year": 1996
+    },
+    {
+     "title": "The Ladykillers",
+     "year": 1955
+    },
+    {
+     "title": "Logan Lucky",
+     "year": 2017
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "crime",
+     "comedy"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 4.795845985412598,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 4,
+  "tr": "savaş sonrası travmayla baş eden asker",
+  "out": {
+   "en_query": "soldier coping with post-war trauma",
+   "hyde": "After returning from the front lines of a brutal conflict, Sergeant Elias Thorne struggles to reintegrate into civilian life in his quiet hometown. He finds himself haunted by vivid flashbacks and the crushing weight of survivor's guilt, which alienates him from his wife and young daughter. As he attempts to hold down a mundane job at a local factory, the sensory triggers of everyday life constantly threaten to pull him back into the chaos of the battlefield. With the help of a fellow veteran, Elias begins to confront the suppressed memories of a specific mission that changed his life forever. Ultimately, he must find a way to reconcile his past actions with his desire for a peaceful future before his internal turmoil destroys his remaining connections.",
+   "titles": [
+    {
+     "title": "The Best Years of Our Lives",
+     "year": 1946
+    },
+    {
+     "title": "Coming Home",
+     "year": 1978
+    },
+    {
+     "title": "The Deer Hunter",
+     "year": 1978
+    },
+    {
+     "title": "Brothers",
+     "year": 2009
+    },
+    {
+     "title": "First Blood",
+     "year": 1982
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 3.7023978233337402,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 5,
+  "tr": "ıssız bir yerde mahsur kalan bir grup insanın hayatta kalma mücadelesi",
+  "out": {
+   "en_query": "a group of people stranded in a desolate location struggling to survive",
+   "hyde": "After their small charter plane crashes in the remote wilderness of the Alaskan mountains, a group of survivors must navigate the harsh terrain to find civilization. Led by a pragmatic engineer, the group faces freezing temperatures, dwindling supplies, and the constant threat of predatory wildlife. Internal tensions rise as the survivors struggle with injuries and the psychological toll of their isolation. As they trek through the unforgiving landscape, they discover that their survival depends on their ability to work together despite their conflicting personalities. Ultimately, only a few manage to reach a remote outpost, forever changed by their harrowing ordeal.",
+   "titles": [
+    {
+     "title": "The Grey",
+     "year": 2011
+    },
+    {
+     "title": "Alive",
+     "year": 1993
+    },
+    {
+     "title": "Lord of the Flies",
+     "year": 1963
+    },
+    {
+     "title": "The Edge",
+     "year": 1997
+    },
+    {
+     "title": "Society of the Snow",
+     "year": 2023
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "survival",
+     "drama",
+     "adventure"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.7346656322479248,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 6,
+  "tr": "çocukluk arkadaşlarının yıllar sonra buluşması, nostalji ve pişmanlık",
+  "out": {
+   "en_query": "childhood friends reuniting after many years dealing with nostalgia and regret",
+   "hyde": "After two decades of separation, a group of childhood friends reunites in their small hometown for the funeral of a mutual acquaintance. As they spend the weekend together, the initial joy of reconnection slowly gives way to the surfacing of long-buried secrets and unresolved conflicts from their youth. Each character grapples with the stark contrast between their current adult lives and the idealistic dreams they once shared. Through intimate conversations and shared memories, they are forced to confront the mistakes and regrets that have shaped their paths. By the time they part ways, they must decide whether to cling to the past or find a way to reconcile their history with their present realities.",
+   "titles": [
+    {
+     "title": "The Big Chill",
+     "year": 1983
+    },
+    {
+     "title": "Peter's Friends",
+     "year": 1992
+    },
+    {
+     "title": "Grown Ups",
+     "year": 2010
+    },
+    {
+     "title": "Beautiful Girls",
+     "year": 1996
+    },
+    {
+     "title": "St. Elmo's Fire",
+     "year": 1985
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 19.95160460472107,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 7,
+  "tr": "kasvetli atmosferli, yavaş ilerleyen kuzey ülkesi polisiyesi",
+  "out": {
+   "en_query": "slow-paced atmospheric Nordic noir crime thriller",
+   "hyde": "In a remote, snow-covered town in Northern Norway, a seasoned detective investigates the mysterious death of a local fisherman found on the frozen shoreline. As the endless winter night stretches on, he uncovers a web of corruption and long-buried secrets involving the town's prominent families. The investigation is hampered by the harsh climate and the stoic, tight-lipped nature of the local community. Haunted by his own past failures, the detective struggles to maintain his composure while the killer remains one step ahead. The case reaches a chilling climax when he discovers that the murder is linked to a decades-old disappearance that the town has collectively tried to forget.",
+   "titles": [
+    {
+     "title": "Insomnia",
+     "year": 1997
+    },
+    {
+     "title": "The Keeper of Lost Causes",
+     "year": 2013
+    },
+    {
+     "title": "Jar City",
+     "year": 2006
+    },
+    {
+     "title": "The Snowman",
+     "year": 2017
+    },
+    {
+     "title": "Border",
+     "year": 2018
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "Norway",
+     "Sweden",
+     "Denmark",
+     "Iceland",
+     "Finland"
+    ],
+    "genres": [
+     "crime",
+     "thriller",
+     "mystery"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.7704315185546875,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 8,
+  "tr": "90'lardan az bilinen Japon korku filmleri",
+  "out": {
+   "en_query": "obscure Japanese horror films from the 1990s",
+   "hyde": "In 1990s Tokyo, a series of unexplained disappearances plagues a quiet residential district, leading a skeptical journalist to investigate a local urban legend. As she delves deeper, she discovers a cursed videotape that seems to be linked to the victims' final moments. Strange phenomena begin to manifest in her own apartment, blurring the line between reality and the supernatural. She eventually uncovers a dark ritual performed decades prior that continues to claim souls. With time running out, she must find a way to break the cycle before she becomes the next victim of the vengeful spirit.",
+   "titles": [
+    {
+     "title": "Cure",
+     "year": 1997
+    },
+    {
+     "title": "Tetsuo: The Iron Man",
+     "year": 1989
+    },
+    {
+     "title": "Gemini",
+     "year": 1999
+    },
+    {
+     "title": "Evil Dead Trap",
+     "year": 1988
+    },
+    {
+     "title": "Organ",
+     "year": 1996
+    }
+   ],
+   "filters": {
+    "year_min": 1990,
+    "year_max": 1999,
+    "countries": [
+     "Japan"
+    ],
+    "genres": [
+     "horror"
+    ],
+    "max_vote_count": 2000
+   }
+  },
+  "sec": 4.474411487579346,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 9,
+  "tr": "ayrılık sonrası izlenecek umut veren filmler",
+  "out": {
+   "en_query": "uplifting movies to watch after a breakup",
+   "hyde": "After a painful and unexpected breakup, Maya decides to quit her high-pressure job in the city and move to a small coastal town to renovate an old bookstore. As she immerses herself in the local community, she forms an unlikely friendship with a reclusive local artist who is also recovering from his own past trauma. Through their shared love of literature and quiet walks on the beach, Maya begins to rediscover her own passions and self-worth. The film follows her journey of healing, showing how she learns to embrace change and find joy in the small moments of life. By the end of the summer, she realizes that the end of one chapter is merely the beginning of a more authentic life.",
+   "titles": [
+    {
+     "title": "Eat Pray Love",
+     "year": 2010
+    },
+    {
+     "title": "Under the Tuscan Sun",
+     "year": 2003
+    },
+    {
+     "title": "Forgetting Sarah Marshall",
+     "year": 2008
+    },
+    {
+     "title": "Wild",
+     "year": 2014
+    },
+    {
+     "title": "The Holiday",
+     "year": 2006
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "romance",
+     "drama",
+     "comedy"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 1.8605737686157227,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 10,
+  "tr": "70'lerden paranoya dolu Amerikan siyasi gerilimleri",
+  "out": {
+   "en_query": "1970s American political thriller films filled with paranoia",
+   "hyde": "In the wake of a national scandal, a disillusioned investigative journalist uncovers a deep-seated conspiracy involving high-ranking government officials. As he digs deeper into the classified documents, he realizes that he is being followed by mysterious agents intent on silencing him. His paranoia grows as he discovers that his own colleagues may be compromised by the very organization he is investigating. With time running out, he must decide whether to expose the truth and risk his life or remain silent to ensure his survival. The film culminates in a tense confrontation in a deserted parking garage, where the full extent of the systemic corruption is finally revealed.",
+   "titles": [
+    {
+     "title": "The Conversation",
+     "year": 1974
+    },
+    {
+     "title": "All the President's Men",
+     "year": 1976
+    },
+    {
+     "title": "Three Days of the Condor",
+     "year": 1975
+    },
+    {
+     "title": "The Parallax View",
+     "year": 1974
+    },
+    {
+     "title": "Marathon Man",
+     "year": 1976
+    }
+   ],
+   "filters": {
+    "year_min": 1970,
+    "year_max": 1979,
+    "countries": [
+     "United States"
+    ],
+    "genres": [
+     "thriller"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 12.101513624191284,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 11,
+  "tr": "küçük bir Fransız kasabasında geçen, sıcak ve hafif aile komedileri",
+  "out": {
+   "en_query": "warm and lighthearted family comedy movies set in a small French village",
+   "hyde": "In the picturesque village of Saint-Céneri, the local baker, Marc, struggles to keep his family business afloat while dealing with his eccentric relatives. When a high-strung Parisian food critic unexpectedly arrives in town, the entire community rallies together to showcase their traditional culinary heritage. Through a series of comedic misunderstandings and heartwarming town gatherings, the villagers learn to appreciate their simple way of life. Marc eventually finds a balance between his professional ambitions and his devotion to his family. The film concludes with a grand village festival that celebrates unity, love, and the joy of shared meals.",
+   "titles": [
+    {
+     "title": "Le Chocolat",
+     "year": 2000
+    },
+    {
+     "title": "Amélie",
+     "year": 2001
+    },
+    {
+     "title": "Bienvenue chez les Ch'tis",
+     "year": 2008
+    },
+    {
+     "title": "Le Fabuleux Destin d'Amélie Poulain",
+     "year": 2001
+    },
+    {
+     "title": "La Gloire de mon père",
+     "year": 1990
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "France"
+    ],
+    "genres": [
+     "comedy",
+     "family"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 3.7149808406829834,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 12,
+  "tr": "az bilinen İskandinav bağımsız dramaları, soğuk ve içe dönük",
+  "out": {
+   "en_query": "lesser-known Scandinavian independent dramas with a cold and introspective atmosphere",
+   "hyde": "In a remote, snow-covered village in Northern Norway, a reclusive fisherman struggles to cope with the sudden disappearance of his estranged daughter. As the endless winter nights stretch on, he spends his days in isolation, haunted by memories and the crushing silence of the landscape. A local schoolteacher attempts to reach out to him, but her efforts are met with stoic resistance and deep-seated grief. The film explores the fragile nature of human connection against the backdrop of an unforgiving, icy environment. Ultimately, the man must confront his past mistakes to find a sliver of peace before the spring thaw arrives.",
+   "titles": [
+    {
+     "title": "Kitchen Stories",
+     "year": 2003
+    },
+    {
+     "title": "Songs from the Second Floor",
+     "year": 2000
+    },
+    {
+     "title": "The Bothersome Man",
+     "year": 2006
+    },
+    {
+     "title": "Oslo, August 31st",
+     "year": 2011
+    },
+    {
+     "title": "A Pigeon Sat on a Branch Reflecting on Existence",
+     "year": 2014
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "Norway",
+     "Sweden",
+     "Denmark",
+     "Finland",
+     "Iceland"
+    ],
+    "genres": [
+     "drama"
+    ],
+    "max_vote_count": 2000
+   }
+  },
+  "sec": 3.480487585067749,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 13,
+  "tr": "2000'den sonra Kore'den çıkan, gerilimi yüksek intikam filmleri",
+  "out": {
+   "en_query": "high-tension South Korean revenge thriller films released after 2000",
+   "hyde": "A man is kidnapped and imprisoned in a windowless hotel room for fifteen years without explanation. Upon his sudden release, he is given five days to track down his captor and uncover the motive behind his confinement. As he navigates a dark underworld, he forms a bond with a young sushi chef who assists him in his investigation. The trail leads to a wealthy, enigmatic man who orchestrates a series of psychological games. Ultimately, the protagonist discovers a devastating truth about his own past that shatters his reality.",
+   "titles": [
+    {
+     "title": "Oldboy",
+     "year": 2003
+    },
+    {
+     "title": "I Saw the Devil",
+     "year": 2010
+    },
+    {
+     "title": "The Handmaiden",
+     "year": 2016
+    },
+    {
+     "title": "A Bittersweet Life",
+     "year": 2005
+    },
+    {
+     "title": "Sympathy for Mr. Vengeance",
+     "year": 2002
+    }
+   ],
+   "filters": {
+    "year_min": 2001,
+    "year_max": null,
+    "countries": [
+     "South Korea"
+    ],
+    "genres": [
+     "thriller",
+     "revenge"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 4.119959115982056,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 14,
+  "tr": "yağmurlu bir şehirde geçen melankolik aşk filmleri",
+  "out": {
+   "en_query": "melancholic romance films set in a rainy city",
+   "hyde": "In a perpetually rain-soaked metropolis, a lonely architect finds himself drawn to a mysterious woman he encounters at a late-night diner. As they navigate the neon-lit, mist-covered streets, they share intimate conversations about their past regrets and lost loves. Their burgeoning relationship is shadowed by the melancholic atmosphere of the city and the realization that their time together may be fleeting. They spend their nights wandering through quiet alleyways and rain-drenched parks, seeking solace in each other's company. Ultimately, they must decide whether to hold onto their fragile connection or succumb to the isolation that defines their urban existence.",
+   "titles": [
+    {
+     "title": "In the Mood for Love",
+     "year": 2000
+    },
+    {
+     "title": "Blade Runner",
+     "year": 1982
+    },
+    {
+     "title": "Chungking Express",
+     "year": 1994
+    },
+    {
+     "title": "Lost in Translation",
+     "year": 2003
+    },
+    {
+     "title": "Seven",
+     "year": 1995
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "romance",
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 8.485413789749146,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 15,
+  "tr": "çocuklarla izlenebilecek, az bilinen, hayal gücü yüksek animasyonlar",
+  "out": {
+   "en_query": "imaginative and lesser-known animated films suitable for children",
+   "hyde": "In a hidden valley where the laws of physics are dictated by dreams, a young girl named Elara discovers a portal to a realm made entirely of paper and ink. She teams up with a grumpy, ink-stained fox to restore the fading colors of the world before the encroaching void consumes their home. Along their journey, they encounter whimsical creatures and solve intricate puzzles that require creative thinking rather than force. As Elara learns to manipulate the environment through her own imagination, she realizes that the portal's stability depends on her belief in the impossible. Ultimately, she must confront the shadow of doubt to save both her world and the magical realm from disappearing forever.",
+   "titles": [
+    {
+     "title": "Song of the Sea",
+     "year": 2014
+    },
+    {
+     "title": "The Boy and the World",
+     "year": 2013
+    },
+    {
+     "title": "Mune: Guardian of the Moon",
+     "year": 2014
+    },
+    {
+     "title": "April and the Extraordinary World",
+     "year": 2015
+    },
+    {
+     "title": "Long Way North",
+     "year": 2015
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": null,
+    "genres": [
+     "animation",
+     "fantasy"
+    ],
+    "max_vote_count": 2000
+   }
+  },
+  "sec": 3.1646883487701416,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 16,
+  "tr": "savaş karşıtı duruşu güçlü, 1960 öncesi siyah beyaz filmler",
+  "out": {
+   "en_query": "black and white anti-war films released before 1960",
+   "hyde": "In the final days of the Second World War, a disillusioned infantryman finds himself trapped behind enemy lines in a devastated European village. As he navigates the ruins, he encounters a group of civilians struggling to survive the relentless shelling from both sides. Through a series of harrowing encounters, he begins to question the morality of the conflict and the orders he has been forced to carry out. He eventually forms an unlikely alliance with a local woman to help a group of orphans escape the combat zone. The film concludes with a poignant reflection on the futility of violence and the enduring human spirit amidst the chaos of total war.",
+   "titles": [
+    {
+     "title": "Paths of Glory",
+     "year": 1957
+    },
+    {
+     "title": "All Quiet on the Western Front",
+     "year": 1930
+    },
+    {
+     "title": "Grand Illusion",
+     "year": 1937
+    },
+    {
+     "title": "The Burmese Harp",
+     "year": 1956
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": 1959,
+    "countries": null,
+    "genres": [
+     "war",
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 2.9800467491149902,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 17,
+  "tr": "Latin Amerika'dan göçmenlik ve sınır temalı dramalar",
+  "out": {
+   "en_query": "drama films about immigration and border crossing from Latin America",
+   "hyde": "Elena, a young woman from a small village in Honduras, embarks on a perilous journey toward the United States to escape systemic violence and poverty. Along the way, she joins forces with Mateo, a disillusioned former soldier, and a young boy named Leo who has been separated from his parents. The trio faces treacherous terrain, corrupt border officials, and the constant threat of criminal cartels as they navigate the desert landscape. As they reach the border, they must decide whether to risk everything for a chance at a new life or turn back to face their pasts. The film culminates in a tense, emotional confrontation at the border fence that tests the limits of their endurance and humanity.",
+   "titles": [
+    {
+     "title": "Sin Nombre",
+     "year": 2009
+    },
+    {
+     "title": "El Norte",
+     "year": 1983
+    },
+    {
+     "title": "Which Way Home",
+     "year": 2009
+    },
+    {
+     "title": "La Jaula de Oro",
+     "year": 2013
+    },
+    {
+     "title": "Maria Full of Grace",
+     "year": 2004
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "Mexico",
+     "United States",
+     "Honduras",
+     "Guatemala"
+    ],
+    "genres": [
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 4.250532150268555,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 18,
+  "tr": "80'lerden distopik gelecekte geçen, sisteme karşı çıkan bilim kurgu",
+  "out": {
+   "en_query": "dystopian science fiction film from the 1980s featuring a protagonist rebelling against a totalitarian system",
+   "hyde": "In a bleak, neon-lit future, a disillusioned worker discovers a hidden truth about the oppressive regime controlling society. After witnessing the systemic cruelty of the ruling elite, he decides to join an underground resistance movement. He navigates a decaying urban landscape while being hunted by relentless government enforcers. As he uncovers the secret behind the city's artificial reality, he must choose between his own survival and the liberation of his people. The story culminates in a desperate confrontation at the heart of the city's power structure.",
+   "titles": [
+    {
+     "title": "Blade Runner",
+     "year": 1982
+    },
+    {
+     "title": "Brazil",
+     "year": 1985
+    },
+    {
+     "title": "They Live",
+     "year": 1988
+    },
+    {
+     "title": "1984",
+     "year": 1984
+    },
+    {
+     "title": "Escape from New York",
+     "year": 1981
+    }
+   ],
+   "filters": {
+    "year_min": 1980,
+    "year_max": 1989,
+    "countries": null,
+    "genres": [
+     "science fiction",
+     "dystopian"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 3.2297818660736084,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ },
+ {
+  "kind": "t",
+  "n": 19,
+  "tr": "İranlı yönetmenlerden, çocukların gözünden anlatılan sade filmler",
+  "out": {
+   "en_query": "simple films by Iranian directors told from the perspective of children",
+   "hyde": "In a small, dusty village in Iran, a young boy named Ahmad accidentally takes his classmate's notebook home after school. Knowing that his friend will be expelled if he does not return the homework, Ahmad embarks on a perilous journey to the neighboring village. He navigates the labyrinthine alleys and encounters various indifferent adults who offer little help in his quest. Despite the overwhelming odds and the setting sun, his persistence reflects the innocence and moral clarity of childhood. Ultimately, he manages to return the notebook just in time, preserving his friend's future in a quiet, poignant victory.",
+   "titles": [
+    {
+     "title": "Where Is the Friend's House?",
+     "year": 1987
+    },
+    {
+     "title": "Children of Heaven",
+     "year": 1997
+    },
+    {
+     "title": "The Mirror",
+     "year": 1997
+    },
+    {
+     "title": "The White Balloon",
+     "year": 1995
+    },
+    {
+     "title": "Bashu, the Little Stranger",
+     "year": 1989
+    }
+   ],
+   "filters": {
+    "year_min": null,
+    "year_max": null,
+    "countries": [
+     "Iran"
+    ],
+    "genres": [
+     "drama"
+    ],
+    "max_vote_count": null
+   }
+  },
+  "sec": 5.604104280471802,
+  "model": "gemini-3.1-flash-lite",
+  "retry": 0
+ }
+]

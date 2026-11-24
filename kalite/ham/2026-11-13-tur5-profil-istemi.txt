@@ -1,0 +1,14 @@
+You write a short search-index profile of a film, using ONLY the text provided below (Wikipedia plot, TMDB overview/tagline/keywords). Do NOT use your own knowledge of the film; if something is not supported by the provided text, leave it out. No invention. If the text is too thin to judge (e.g. the plot is very short and there is no overview), leave fields empty ([] or "" or "unknown") and set "evidence" to "insufficient".
+
+Return ONLY one JSON object (no markdown), with exactly these keys:
+{"themes": [3-6 short English phrases],
+ "mood": [2-4 values, ONLY from this list: bleak, melancholic, tense, eerie, warm, hopeful, playful, absurd, romantic, nostalgic, gritty, dreamlike, claustrophobic, contemplative, tragic, uplifting, darkly comic, suspenseful, intimate, epic, cynical, tender, disturbing, whimsical, somber],
+ "tone": one English sentence describing the film's feel,
+ "pacing": "slow" | "medium" | "fast" | "unknown",
+ "setting": {"place": "...", "period": "..."},
+ "narrative": [0-3 narrative features, e.g. "single location", "unreliable narrator", "ensemble cast", "nonlinear"],
+ "for_viewers": one English sentence starting "For viewers looking for ...",
+ "tr_pitch": one TURKISH sentence introducing the film, no spoilers,
+ "evidence": "rich" | "thin" | "insufficient"}
+
+FILM DATA:

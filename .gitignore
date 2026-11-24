@@ -1,0 +1,12 @@
+# Ortam dosyası (anahtarlar burada durur, depoya girmez)
+.env
+.env.*
+!.env.example
+
+# Kurulumun indirdiği veri ve modeller
+/veri/
+/modeller/
+
+__pycache__/
+*.pyc
+node_modules/

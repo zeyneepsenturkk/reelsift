@@ -1,0 +1,39 @@
+{
+  "repo": "zeyneepsenturkk/reelsift",
+  "etiket": "veri-2026-11-18",
+  "yedek_dosya": "reelsift-veri-2026-11-18.dump",
+  "yedek_boyut_bayt": 1676433985,
+  "yedek_sha256": "03507d1db605e3962c0ca9478d2b528918f0483ca51913edd24a376bc13aaef5",
+  "video_dosya": "zeynep-icin.mp4",
+  "anlatim_dosya": "anlatim.html",
+  "tahmini_toplam": "45 dakika ile 1 saat arası, internet hızına bağlı",
+  "olcum": "2026-11-19 prova (RTX 4060 masaüstü, tr-TR Windows, ev interneti ~19 MB/s, Docker imaj önbelleği DOLU): kontrol 8 sn, arşiv indirme+özet 91 sn, uygulama imajı (önbellekli build) 328 sn, modeller indirme ~354 sn, arşiv yükleme 643 sn, dizin 46 sn, kullanıcı 17 sn, başlatma+ısınma 302 sn, son kontrol 2 sn = yaklaşık 30 dakika (anahtar yapıştırma hariç). Soğuk imaj kurulumu (sunucu imajı 9,98 GB indirme/derleme) bu makinede ÖLÇÜLMEDİ; tahmin 45 dk - 1 saat bu yüzden iyimser olabilir, yavaş internette daha uzun sürer.",
+  "kimlik": { "kullanici": "editor" },
+  "adresler": { "uygulama": "http://localhost:5173", "saglik": "http://localhost:8000/api/health", "giris_api": "http://localhost:8000/api" },
+  "disk": {
+    "toplam_gb": 45,
+    "proje_diski_gb": 10,
+    "docker_diski_gb": 35,
+    "hesap": "Ölçülen (bu makine): sunucu imajı 9,98 GB, arayüz imajı 0,68 GB, pgvector imajı 0,66 GB, veritabanı 2,6 GB (HNSW indeksleriyle), arama modelleri 4,6 GB, kelime indeksi 0,23 GB, arşiv dosyası (yedek) ayrıca. Docker'ın derleme önbelleği ve sanal disk payı için bol pay bırakıldı; 45 GB bir üst sınır tahminidir, uçtan uca ölçülmedi."
+  },
+  "modeller_toplam_bayt": 4586557909,
+  "modeller": [
+    { "model": "BAAI/bge-m3", "surum": "5617a9f61b028005a4858fdac845db406aefb181", "dosya_sayisi": 10 },
+    { "model": "BAAI/bge-reranker-v2-m3", "surum": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e", "dosya_sayisi": 6 }
+  ],
+  "gemini": { "model": "gemini-3.5-flash-lite", "rpm": 8 },
+  "ollama": { "model": "qwen3:4b-instruct-2507-q4_K_M", "base_url": "http://host.docker.internal:11434", "num_ctx": 12288, "model_boyut_bayt": 2497293803 },
+  "adimlar": [
+    { "id": "kontrol",   "ad": "Bilgisayar kontrolü",         "aciklama": "Bilgisayarının kurulum için hazır olup olmadığına bakıyorum." },
+    { "id": "video",     "ad": "Tanıtım videosu",             "aciklama": "Beklerken izleyebilmen için kısa bir tanıtım videosu indiriyorum." },
+    { "id": "anahtar",   "ad": "Dil modeli",                  "aciklama": "Yapay zekânın çalışması için hangi dil modelini kullanacağını seçiyorsun: Gemini (ücretsiz anahtar), Claude (ücretli anahtar) ya da bilgisayarındaki yerel model." },
+    { "id": "arsiv",     "ad": "Film arşivi",                 "aciklama": "Film arşivini indiriyorum; en büyük indirme bu, biraz sürecek." },
+    { "id": "uygulama",  "ad": "Uygulamanın hazırlanması",    "aciklama": "Uygulamanın çalışacağı ortamı kuruyorum; uzun sürer, bilgisayar bu sırada biraz yavaşlayabilir." },
+    { "id": "modeller",  "ad": "Arama modelleri",             "aciklama": "Filmleri anlamla aramayı sağlayan iki yapay zekâ modelini indiriyorum." },
+    { "id": "yukleme",   "ad": "Arşivin yüklenmesi",          "aciklama": "İndirdiğim film arşivini veritabanına yerleştiriyorum." },
+    { "id": "dizin",     "ad": "Arama dizini",                "aciklama": "Kelimeyle aramayı hızlandıran dizini hazırlıyorum." },
+    { "id": "kullanici", "ad": "Kullanıcı",                   "aciklama": "Giriş yapabilmen için hesabını açıyorum; şifreni kurulum sonunda göstereceğim." },
+    { "id": "baslatma",  "ad": "Başlatma",                    "aciklama": "Uygulamayı başlatıyorum; arama modelleri ısınırken birkaç dakika bekleyeceğiz." },
+    { "id": "son",       "ad": "Son kontrol",                 "aciklama": "Her şeyin gerçekten çalıştığından emin oluyorum." }
+  ]
+}
