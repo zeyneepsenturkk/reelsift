@@ -260,6 +260,8 @@ Yerel modelle iki gerçek istek uçtan uca denendi (aynı gün, aynı makine; mo
 
 Özetle yerel model seçeneği tematik isteklerde çalışıyor ama yavaş ve daha az isabetli; kişi adı içeren isteklerde güvenilir değil. Demo ve ölçümler için Claude Haiku önerilir.
 
+Bellek notu: 8 GB ekran kartında yerel model ile arama modelleri aynı belleği paylaşır. Uygulama açılırken arama modelleri ısınıyorsa (ilk 2-4 dakika) yerel modelin ilk çağrısı bellek yetmediği için "dil modeline ulaşılamıyor" hatası verebilir; ısınma bitince ("Arama hazır") tekrar denenince çalışır.
+
 ## MCP (Model Context Protocol)
 
 ReelSift MCP'yi iki yönde kullanır.

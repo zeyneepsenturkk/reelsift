@@ -30,7 +30,7 @@ T = TypeVar("T", bound=BaseModel)
 # Kullanıcıya giden sade mesajlar; ham API metni istemciye gitmez.
 MSG_UNAVAILABLE = "Dil modeline şu an ulaşılamıyor. Biraz sonra tekrar dene."
 MSG_BUSY = "Dil modeli şu an yoğun. Biraz sonra tekrar dene."
-MSG_CONFIG = "Dil modeli yapılandırılmamış. Yöneticiye haber ver."
+MSG_CONFIG = "Dil modeli anahtarı eksik ya da geçersiz. Ayarlar'dan anahtarı yeniden gir."
 MSG_BAD_OUTPUT = "Model cevabı beklenen biçimde gelmedi. İsteği tekrar gönder."
 MSG_TRUNCATED = "Model cevabı yarıda kesildi. İsteği biraz sadeleştirip tekrar dene."
 MSG_REFUSED = "Model bu isteğe cevap vermedi. İsteği farklı bir şekilde yazmayı dene."
