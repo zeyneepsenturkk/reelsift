@@ -105,7 +105,7 @@ Tarayıcıda açılan kurulum sayfası (`http://localhost:5174`) adımları sır
 
 Yarıda kesilirse aynı komut kaldığı yerden sürer.
 
-Kurulum bitince uygulama `http://localhost:5173` adresindedir. Toplam süre internet hızına göre 45 dakika ile 1 saat arasıdır (ölçüm: sıcak Docker önbelleğiyle yaklaşık 30 dakika).
+Kurulum bitince uygulama `http://localhost:5173` adresindedir. Bu yol 24 Kasım 2026'da bu deponun temiz bir klonuyla baştan sona denendi: 11 adımın 11'i hatasız, 35 dakika 37 saniye (RTX 4060, Docker önbelleği dolu; film arşivi Releases'ten girişsiz indi), ardından giriş, sağlık denetimi, bir taslak isteği ve MCP ucu doğrulandı. Toplam süre internet hızına göre 45 dakika ile 1 saat arasıdır (ölçüm: sıcak Docker önbelleğiyle yaklaşık 30 dakika).
 
 ### Yapay zekâ asistanıyla kurulum
 
@@ -252,6 +252,8 @@ Yerel modelle iki gerçek istek uçtan uca denendi (aynı gün, aynı makine; mo
 | "Zeki Demirkubuz'un filmlerinden 3 film öner" | Çalışmadı (2 denemede 2): yerel model isteği "arşivde ara" diye çözümlemedi, arşive bakmadan kendi bilgisiyle cevap yazdı; taslak çıkmadı. |
 
 Özetle yerel model seçeneği tematik isteklerde çalışıyor ama yavaş ve daha az isabetli; kişi adı içeren isteklerde güvenilir değil. Demo ve ölçümler için Claude Haiku önerilir.
+
+Kurulum provasında (temiz kurulum, yerel model seçili) aynı tematik istek ilk denemede "model cevabı yarıda kesildi" hatasıyla düştü, ikinci denemede 70 saniyede 3 filmlik taslak çıkardı: yerel modelde bir isteği tekrar göndermek gerekebilir.
 
 Bellek notu: 8 GB ekran kartında yerel model ile arama modelleri aynı belleği paylaşır. Uygulama açılırken arama modelleri ısınıyorsa (ilk 2-4 dakika) yerel modelin ilk çağrısı bellek yetmediği için "dil modeline ulaşılamıyor" hatası verebilir; ısınma bitince ("Arama hazır") tekrar denenince çalışır.
 
