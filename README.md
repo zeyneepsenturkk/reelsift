@@ -23,12 +23,13 @@ ReelSift, film editörleri için bir kürasyon masasıdır. Editör doğal dille
 |---|---|
 | Veri | 94.683 film: TMDB bilgileri + Wikipedia hikâye metinleri (gerçek veri) |
 | Yöntem | RAG: vektör araması + kelime araması + yeniden sıralama, LangGraph ile adım adım ajan akışı |
-| Dil modeli | Üç seçenek: Claude Haiku 5.5, Google Gemini (ücretsiz anahtar), yerel model (Ollama) |
+| Dil modeli | Üç seçenek: Claude Haiku 5.5, Google Gemini (ücretsiz anahtar), yerel model (Ollama); kurulumda seçilir, uygulama içinden Ayarlar ile değiştirilir |
+| MCP | Arşiv ve arama hattı MCP sunucusuyla dış yapay zekâ asistanlarına açılır; ajan da bilgi sorularında bir MCP aracıyla kaynak getirir |
 | Arama modelleri | Yerelde, ekran kartında: `BAAI/bge-m3` (embedding), `BAAI/bge-reranker-v2-m3` (yeniden sıralama) |
 | Güvence | Alıntı kaynak metinde birebir geçmiyorsa film taslağa girmez (düz kod denetler); onayı yalnız insan verir |
 | Yayın | Editörün onayladığı seçki tek tıkla herkese açık sitede yayınlanır: [livegundem.com](https://livegundem.com) |
 | Ölçüm | 105 istekle uçtan uca ölçüldü; ayrıntı [`KALITE.md`](KALITE.md) |
-| Testler | Backend 974, arayüz 132 otomatik test |
+| Testler | Backend 1052, arayüz 144 otomatik test |
 
 ## Nasıl çalışır
 
@@ -96,6 +97,8 @@ cd reelsift
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File kurulum\sunucu.ps1
 ```
 
+<p align="center"><img src="sunum/ortak/ekran/kurulum-sayfasi.png" alt="Kurulum sayfası" width="460"></p>
+
 Tarayıcıda açılan kurulum sayfası (`http://localhost:5174`) adımları sırayla yürütür ve her adımda ne yaptığını söyler:
 
 1. **Bilgisayar kontrolü:** Docker, disk, ekran kartı ve internet erişimi.
@@ -110,6 +113,10 @@ Tarayıcıda açılan kurulum sayfası (`http://localhost:5174`) adımları sır
 Yarıda kesilirse aynı komut kaldığı yerden sürer.
 
 Kurulum bitince uygulama `http://localhost:5173` adresindedir. Toplam süre internet hızına göre 45 dakika ile 1 saat arasıdır (ölçüm: sıcak Docker önbelleğiyle yaklaşık 30 dakika).
+
+### Yapay zekâ asistanıyla kurulum
+
+Depoyu klonladıktan sonra klasörü bir yapay zekâ kodlama asistanında (Claude Code, Cursor, Codex vb.) açıp "kuruluma başlayalım" yazman yeterlidir. Kökteki [`AGENTS.md`](AGENTS.md) asistana kurulum sayfasını nasıl başlatacağını, ilerlemeyi nereden izleyeceğini, sık görülen sorunları ve dokunmaması gerekenleri (anahtarlar, veri silen komutlar) anlatır.
 
 ### B. Elle kurulum
 
@@ -192,6 +199,16 @@ Ekran kartı olmayan makinede `docker compose -f docker-compose.yml up -d` yaln�
 
 Sonraki açılışlarda yalnız `docker compose up -d` yeterlidir.
 
+### Dil modelini sonradan değiştirme
+
+Uygulamada sol alttaki kullanıcı menüsünden **Ayarlar**'ı aç: "Dil modeli" penceresinde Claude, Gemini ya da yerel modeli seç, gerekiyorsa API anahtarını gir ve **Bağlantıyı dene** ile çalıştığını gör. Değişiklik sunucuyu yeniden başlatmadan bir sonraki istekte geçerli olur.
+
+<p align="center"><img src="sunum/ortak/ekran/ayarlar-dil-modeli.png" alt="Dil modeli ayarı" width="420"></p>
+
+- Anahtarlar veritabanında şifreli saklanır (Fernet; anahtar `DJANGO_SECRET_KEY`'den türetilir) ve hiçbir zaman ekrana, API cevabına ya da loglara geri yazılmaz; yalnız son dört karakteri ipucu olarak gösterilir.
+- Kayıt yoksa kökteki `.env` dosyasındaki ayar kullanılır; arayüzden kaydedilen ayar onun üstüne yazar.
+- Bu ekran tek kullanıcılı yerel kurulum için tasarlandı: oturum açmış her kullanıcı ayarı değiştirebilir.
+
 ## Ölçüm
 
 Uçtan uca ölçüm: 105 gerçek istek, dil modeli döngüde (18 Kasım 2026, Claude Haiku 5.5, 105 turun 105'i hatasız bitti).
@@ -243,6 +260,48 @@ Yerel modelle iki gerçek istek uçtan uca denendi (aynı gün, aynı makine; mo
 
 Özetle yerel model seçeneği tematik isteklerde çalışıyor ama yavaş ve daha az isabetli; kişi adı içeren isteklerde güvenilir değil. Demo ve ölçümler için Claude Haiku önerilir.
 
+## MCP (Model Context Protocol)
+
+ReelSift MCP'yi iki yönde kullanır.
+
+### 1. Ajan bir MCP aracı kullanır: kaynaklı cevap
+
+Editör taslak istemek yerine bir bilgi sorusu sorduğunda ("Zeki Demirkubuz kimdir?", "Film noir ne demek?") ajan cevabı kendi ezberinden yazmaz. Önce sorunun konusunu çıkarır, sonra MCP istemcisi üzerinden `wikipedia_ozet` aracını çağırır, cevabını dönen özete dayandırır ve kaynağı cevabın sonuna **kod** ekler (model değil):
+
+```
+Kaynak: Wikipedia, https://tr.wikipedia.org/wiki/Zeki_Demirkubuz
+```
+
+Araç sunucusu (`apps/agent/mcp_tools.py`) ve istemcisi (`apps/agent/services/mcp_client.py`) aynı süreçte çalışır ama aralarındaki konuşma gerçek MCP protokolüyledir (`initialize`, `call_tool`). Araç bir şey bulamazsa ya da zaman aşımına uğrarsa cevap eskisi gibi verilir; `ANSWER_SOURCES=0` ile kapatılabilir. Seçki / taslak yolu bu değişiklikten etkilenmez.
+
+Gerçek denemede (Claude Haiku + Wikipedia) üç sorudan ikisinde kaynak bulundu ve cevap 2,9 saniyede geldi; "Merhaba, nasılsın?" sorusunda araç çağrılmadı. Sınır: Wikipedia özeti çok kısaysa cevap da kısa kalır; başlık aramasında en yakın sayfa alındığı için yanlış sayfa riski vardır.
+
+### 2. Arşiv bir MCP sunucusuyla dışarıya açılır
+
+Uygulama çalışırken `http://localhost:8000/mcp` adresinde bir MCP sunucusu da açıktır (taşıma: streamable HTTP). MCP destekleyen herhangi bir yapay zekâ asistanı buraya bağlanıp arayüzü açmadan 94.683 filmlik arşivde, ReelSift'in kendi arama hattıyla (vektör + BM25 + RRF + yeniden sıralama) arama yapabilir.
+
+| Araç | Ne yapar |
+|---|---|
+| `film_ara(sorgu, adet, yil_en_az, yil_en_cok, ulke)` | Konuyu, temayı ya da atmosferi anlatan bir cümleyle arar; isteğe bağlı yıl ve ülke filtresi. En çok 25 film döner. |
+| `film_getir(film_id)` | Tek filmin ayrıntısı: künye, özet, hikâye metninden bir bölüm, kaynak bağlantıları. |
+
+Bağlamak için (örnek, Claude Code):
+
+```
+claude mcp add --transport http reelsift http://localhost:8000/mcp
+```
+
+Başka istemcilerde aynı adres "streamable HTTP" sunucusu olarak eklenir. Sonra asistana doğal dille sorulur: "ReelSift arşivinde rüyaların içine girip fikir yerleştiren bir ekibi anlatan film hangisi?"
+
+Gerçek denemede (resmî MCP istemcisiyle) "Inception" tarifi filmi 1. sırada, 1960-1980 ve ABD filtresiyle "The Godfather" tarifi 4. sırada buldu (2,4 sn; arama modelleri soğukken ilk çağrı 31 sn); `film_getir` 0,05 sn.
+
+Bilinmesi gerekenler:
+
+- Sunucu yalnız okur: yalnız film tablosuna erişir; kullanıcı, sohbet, seçki ya da ayar verisine erişen araç yoktur.
+- Kimlik doğrulama yoktur; uç yalnız bu makineden erişilecek biçimde açılır (`127.0.0.1`) ve yabancı `Host` / `Origin` başlıklı istekler reddedilir. Sunucuyu ağa açacaksan önüne kimlik doğrulama koy.
+- Bu araçlar dil modeli çağırmaz; sorguyu çağıran asistan yazar. Arşiv metinleri İngilizce olduğu için İngilizce sorgu daha iyi sonuç verir.
+- Arama modelleri ısınmadan gelen çağrı "arama hazırlanıyor" hatası döner. `MCP_ENABLED=0` ile kapatılır.
+
 ## Testler
 
 ```powershell
@@ -265,7 +324,7 @@ Testler dil modelini ve aramayı sahte nesnelerle çalıştırır (gerçek anaht
 app/backend/     Django uygulaması
   apps/films       arşiv, vektörler, film profilleri
   apps/search      arama hattı (vektör, BM25, RRF, yeniden sıralama) ve ölçüm komutu
-  apps/agent       LangGraph akışı, dil modeli katmanı (Claude, Gemini, Ollama), ölçüm komutu
+  apps/agent       LangGraph akışı, dil modeli katmanı (Claude, Gemini, Ollama) ve ayarı, MCP araçları, ölçüm komutu
   apps/curation    seçkiler, alıntı doğrulama, onay, paylaşım
   apps/chats       sohbetler
   apps/accounts    giriş
@@ -284,7 +343,7 @@ sunum/           logo, ekran görüntüleri, kurulum sayfasının ortak stil ve 
 - Taslak süresi Claude Haiku ile yaklaşık 40-50 saniyedir; Gemini'nin ücretsiz kotasıyla 1,5-5,5 dakika.
 - Ton ve atmosfer isteklerinde kesinlik düşük (%49); en güçlü olduğu yer tarif edilen filmi bulmak ve dönem / ülke / kişi içeren isteklerdir.
 - Türkçe özet arşivin bir bölümünde vardır; alıntılar çoğunlukla İngilizce kaynak metinden gelir.
-- Kurs konularından MCP ve n8n bu projede kullanılmadı; proje RAG, LangGraph ve yerel model başlıklarına odaklandı.
+- Kurs konularından n8n bu projede kullanılmadı; proje RAG, LangGraph, MCP ve yerel model başlıklarına odaklandı.
 - Sürekli tümleştirme (CI) kurulu değil; testler elle çalıştırılır.
 - `KALITE.md` içinde geçen `D:\reelsift-data\...` yolları geliştirme makinesindeki veri klasörüdür, depoda yoktur.
 

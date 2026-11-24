@@ -16,6 +16,7 @@ import httpx2
 from django.conf import settings
 from pydantic import ValidationError
 
+from apps.agent.services import llm_config
 from apps.agent.services.llm import (
     MSG_BAD_OUTPUT,
     MSG_TRUNCATED,
@@ -60,13 +61,17 @@ class OllamaLLM:
         self.num_ctx = num_ctx or settings.OLLAMA_NUM_CTX
         self._transport = transport
         # Tek ekran kartı: çağrılar sırayla gider (ayar: max_concurrent_calls).
-        self._semaphore = asyncio.Semaphore(settings.AGENT["max_concurrent_calls"])
+        self._semaphore = asyncio.Semaphore(
+            llm_config.agent_option("max_concurrent_calls", "ollama")
+        )
 
     def _client(self) -> httpx2.AsyncClient:
         # Zaman aşımı tek isteğin süresidir; yerel modelde ilk çağrı yükleme de içerir.
         return httpx2.AsyncClient(
             base_url=self.base_url,
-            timeout=httpx2.Timeout(settings.AGENT["request_timeout_s"], connect=10.0),
+            timeout=httpx2.Timeout(
+                llm_config.agent_option("request_timeout_s", "ollama"), connect=10.0
+            ),
             transport=self._transport,
         )
 

@@ -122,7 +122,8 @@ NINJA_NUM_PROXIES = 0
 # CSRF hatası /api altında tek tip JSON cevaba çevrilir.
 CSRF_FAILURE_VIEW = "apps.core.views.csrf_failure"
 
-# Dil modeli: anahtar yalnız ortamdan (ANTHROPIC_API_KEY) okunur, ayara girmez.
+# Dil modeli: anahtar ayara girmez; ortamdan (ANTHROPIC_API_KEY) ya da arayüzden kaydedilen
+# ayardan okunur.
 # `.env.example`'taki boş `ANTHROPIC_MODEL=` satırı ortamı boş metin yapar; boşsa varsayılan.
 ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL") or "claude-haiku-5-5"
 
@@ -130,7 +131,8 @@ ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL") or "claude-haiku-5-5"
 # ortamdan okunur, ayara girmez. İkisi de doluysa "Sitede yayınla" açılır.
 VITRIN_URL = (os.environ.get("VITRIN_URL") or "").strip()
 
-# Hangi dil modelinin kullanılacağı. Anahtar (GEMINI_API_KEY) yalnız ortamdan okunur, ayara girmez.
+# Hangi dil modelinin kullanılacağı (varsayılan). Anahtarlar (GEMINI_API_KEY, ANTHROPIC_API_KEY)
+# ayara girmez: ortamdan ya da arayüzden kaydedilen şifreli ayardan okunur.
 LLM_PROVIDERS = ("anthropic", "gemini", "ollama")
 LLM_PROVIDER = os.environ.get("LLM_PROVIDER") or "anthropic"
 if LLM_PROVIDER not in LLM_PROVIDERS:
@@ -163,6 +165,9 @@ GEMINI_FALLBACK_MODELS = [
     if name.strip()
 ]
 
+# Bilgi sorularında konu özeti bir MCP aracıyla getirilir ve cevabın sonuna kaynak satırı eklenir.
+ANSWER_SOURCES = os.environ.get("ANSWER_SOURCES", "1") != "0"
+
 AGENT = {
     # Adım başına düşünme derinliği (output_config.effort).
     "efforts": {"parse": "low", "judge": "low", "write": "medium", "chat": "low"},
@@ -177,17 +182,25 @@ AGENT = {
     "llm_max_retries": 2,  # SDK'nın bağlantı/429/5xx için otomatik yeniden deneme sayısı
     "skip_refused": False,  # model reddi turu bitirir (Gemini'de True: reddedilen atlanır)
 }
-if LLM_PROVIDER == "gemini":
-    # Gemini iki filmin metni aynı istemde olunca PROHIBITED_CONTENT ile engelleyebiliyor (her
-    # film tek başına geçiyor); gerekçe çağrısı film başına yapılır. Claude yolu değişmez.
-    AGENT["write_chunk"] = 1
-    # Tek filmin metni de engellenebiliyor: reddedilen film taslağa girmez, reddedilen aday
-    # kümesi ikiye bölünür; tur sürer. Claude yolu değişmez.
-    AGENT["skip_refused"] = True
-if LLM_PROVIDER == "ollama":
-    # Tek ekran kartı: çağrılar sırayla; yerel modelin yüklemesi ve uzun çıktısı için geniş süre.
-    AGENT["max_concurrent_calls"] = 1
-    AGENT["request_timeout_s"] = 300
+# Sağlayıcıya göre değişen AGENT değerleri. `AGENT` sağlayıcıdan bağımsız varsayılanları taşır;
+# etkin sağlayıcı (arayüzden kaydedilmiş ayar ya da LLM_PROVIDER) çalışma anında
+# `apps.agent.services.llm_config.agent_option` ile bu tablodan seçilir.
+AGENT_PROVIDER_OVERRIDES = {
+    "gemini": {
+        # Gemini iki filmin metni aynı istemde olunca PROHIBITED_CONTENT ile engelleyebiliyor
+        # (her film tek başına geçiyor); gerekçe çağrısı film başına yapılır.
+        "write_chunk": 1,
+        # Tek filmin metni de engellenebiliyor: reddedilen film taslağa girmez, reddedilen aday
+        # kümesi ikiye bölünür; tur sürer. Claude yolu değişmez.
+        "skip_refused": True,
+    },
+    "ollama": {
+        # Tek ekran kartı: çağrılar sırayla; yerel modelin yüklemesi ve uzun çıktısı için
+        # geniş süre.
+        "max_concurrent_calls": 1,
+        "request_timeout_s": 300,
+    },
+}
 
 # Arama hattı (apps.search). Değerler deneylerde ölçülen hattın ayarlarıdır;
 # değişiklik yeniden ölçüm ister.
@@ -219,3 +232,6 @@ SEARCH = {
     # Sunucu açılışında modelleri ve indeksi arka planda yükler (varsayılan kapalı).
     "warmup": os.environ.get("SEARCH_WARMUP", "") == "1",
 }
+
+# Dış yapay zekâ asistanları için MCP sunucusu (/mcp); MCP_ENABLED=0 ile kapatılır.
+MCP_ENABLED = os.environ.get("MCP_ENABLED", "1") != "0"

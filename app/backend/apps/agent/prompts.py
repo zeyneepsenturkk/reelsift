@@ -20,6 +20,7 @@ TAGS = (
     "rationale",
     "request",
     "source",
+    "source_summary",
     "title",
     "tried",
     "user_message",
@@ -268,7 +269,17 @@ If <archive> is present, it lists the films the archive holds for the people nam
 message (film counts and titles). Answer questions about the archive and these people from it, \
 stating its facts directly as facts. No search was run for this message: describe what the \
 archive holds. If <archive> says the archive has no film under a name, say so and suggest \
-checking the spelling."""
+checking the spelling.
+
+If <source_summary> is present, it holds a short encyclopedia summary about the subject of the \
+message. Build the answer from that summary, in your own Turkish sentences, and state its facts \
+directly. The source line is appended after your answer by the system, so your answer ends with \
+its last sentence of content."""
+
+SUBJECT_SYSTEM = """Read the editor's message and name its subject: the person, film, genre or \
+concept the message asks about, written as the title a Wikipedia article would carry (for \
+example "Zeki Demirkubuz", "Film noir"). When the message is small talk, a question about how to \
+use the application, or about the editor's own selection, the subject is null."""
 
 REWRITE_NOTE = (
     "Your previous reply mentioned your inputs or was not plain Turkish. Write the reply "

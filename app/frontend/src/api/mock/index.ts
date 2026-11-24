@@ -2,7 +2,7 @@ import { computeStats, withoutFilm } from '../../lib/collection.ts'
 import { readStored, writeStored } from '../../lib/storage.ts'
 import { ApiError } from '../errors.ts'
 import type { Api } from '../index.ts'
-import type { ChatSummary, CollectionSummary, User } from '../types.ts'
+import type { ChatSummary, CollectionSummary, LlmSettings, User } from '../types.ts'
 import { MOCK_PUBLISH_FAIL_KEY, chatDetail, chats, collections, mockPublishEnabled, newId, shares, summaryOf } from './db.ts'
 import { mockStream } from './stream.ts'
 
@@ -43,6 +43,14 @@ function editable(id: number) {
 }
 
 // `VITE_MOCK=1` iken gerçek istemci yerine kullanılan sahte sürüm; aynı imzalar.
+let llmSettings: LlmSettings = {
+  provider: 'anthropic',
+  source: 'env',
+  anthropic: { configured: true, key_hint: 'abcd', model: 'claude-haiku-5-5' },
+  gemini: { configured: false, key_hint: null, model: 'gemini-3.5-flash-lite' },
+  ollama: { base_url: 'http://localhost:11434', model: 'qwen3:8b' },
+}
+
 export const mockApi: Api = {
   async me() {
     await wait(120)
@@ -165,5 +173,40 @@ export const mockApi: Api = {
       owner_display_name: 'Zeynep Şentürk',
       approved_at: collection.approved_at ?? collection.updated_at,
     }
+  },
+  async getLlmSettings() {
+    await guard()
+    return llmSettings
+  },
+  async updateLlmSettings(body) {
+    await guard()
+    const hasKey = (configured: boolean, typed?: string) => configured || Boolean(typed?.trim())
+    if (body.provider === 'anthropic' && !hasKey(llmSettings.anthropic.configured, body.anthropic_api_key)) {
+      throw new ApiError(400, 'missing_key', 'Claude için API anahtarı gerekli.')
+    }
+    if (body.provider === 'gemini' && !hasKey(llmSettings.gemini.configured, body.gemini_api_key)) {
+      throw new ApiError(400, 'missing_key', 'Gemini için API anahtarı gerekli.')
+    }
+    const hint = (key: string) => key.trim().slice(-4)
+    llmSettings = {
+      ...llmSettings,
+      provider: body.provider,
+      source: 'saved',
+      anthropic: body.anthropic_api_key?.trim()
+        ? { ...llmSettings.anthropic, configured: true, key_hint: hint(body.anthropic_api_key) }
+        : llmSettings.anthropic,
+      gemini: body.gemini_api_key?.trim()
+        ? { ...llmSettings.gemini, configured: true, key_hint: hint(body.gemini_api_key) }
+        : llmSettings.gemini,
+      ollama: {
+        base_url: body.ollama_base_url?.trim() || llmSettings.ollama.base_url,
+        model: body.ollama_model?.trim() || llmSettings.ollama.model,
+      },
+    }
+    return llmSettings
+  },
+  async testLlmSettings() {
+    await wait(900)
+    return { ok: true, seconds: 1.2 }
   },
 }

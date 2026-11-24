@@ -3,7 +3,7 @@ import os
 from unittest import mock
 
 from django.conf import settings
-from django.test import SimpleTestCase, override_settings
+from django.test import SimpleTestCase, TestCase, override_settings
 from google.genai import errors, types
 
 from apps.agent.schemas import AltQueryOutput
@@ -797,12 +797,12 @@ class StreamTextTests(SimpleTestCase):
 
 
 @override_settings(LLM_PROVIDER="gemini")
-class BuildLlmGeminiTests(SimpleTestCase):
+class BuildLlmGeminiTests(TestCase):
     def test_gemini_provider_builds_gemini_llm(self):
         self.assertIsInstance(llm_module.build_llm(), GeminiLLM)
 
 
-class BuildLlmTests(SimpleTestCase):
+class BuildLlmTests(TestCase):
     @override_settings(LLM_PROVIDER="anthropic")
     def test_anthropic_provider_builds_anthropic_llm(self):
         self.assertIsInstance(llm_module.build_llm(), llm_module.AnthropicLLM)

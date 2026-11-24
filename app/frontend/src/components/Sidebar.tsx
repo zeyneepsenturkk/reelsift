@@ -7,6 +7,7 @@ import { useLists } from '../state/lists.tsx'
 import { useSessionViews } from '../state/sessions.tsx'
 import { useShell } from '../state/shell.tsx'
 import { Brand } from './Brand.tsx'
+import { LlmSettingsDialog } from './LlmSettingsDialog.tsx'
 import { Reveal } from './Reveal.tsx'
 
 const navClass = ({ isActive }: { isActive: boolean }) => (isActive ? 'on' : '')
@@ -14,6 +15,7 @@ const navClass = ({ isActive }: { isActive: boolean }) => (isActive ? 'on' : '')
 function UserRow() {
   const { user, signOut } = useAuth()
   const [menu, setMenu] = useState(false)
+  const [settingsOpen, setSettingsOpen] = useState(false)
   const trigger = useRef<HTMLButtonElement>(null)
   const items = useRef<HTMLDivElement>(null)
 
@@ -48,6 +50,7 @@ function UserRow() {
 
   if (!user) return null
   return (
+    <>
     <div
       className="mt-auto"
       onKeyDown={onKeyDown}
@@ -72,12 +75,27 @@ function UserRow() {
       </button>
       {menu && (
         <div className="usermenu" role="menu" ref={items} onPointerDown={(event) => event.stopPropagation()}>
+          <button
+            role="menuitem"
+            onClick={() => {
+              setMenu(false)
+              setSettingsOpen(true)
+            }}
+          >
+            <svg className="gear" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1" />
+            </svg>
+            Ayarlar
+          </button>
           <button role="menuitem" onClick={() => void signOut()}>
             Çıkış yap
           </button>
         </div>
       )}
     </div>
+    {settingsOpen && <LlmSettingsDialog onClose={() => { setSettingsOpen(false); trigger.current?.focus() }} />}
+    </>
   )
 }
 

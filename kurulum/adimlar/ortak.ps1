@@ -416,14 +416,14 @@ function Test-GeminiAnahtar([string]$Anahtar) {
 
 # --- Claude (Anthropic) anahtari -------------------------------------------------------------
 function Test-AnthropicBicimi([string]$Anahtar) {
-    return ([string]$Anahtar -cmatch '^sk-ant-[A-Za-z0-9_\-]{20,300}$')
+    return ([string]$Anahtar -cmatch '^[A-Za-z0-9_.\-]{20,300}$')
 }
 
 # Donus: @{ Tamam; Neden; Mesaj }. Neden: bicim | reddedildi | ag | tamam
 function Test-AnthropicAnahtar([string]$Anahtar) {
     $Anahtar = ([string]$Anahtar).Trim().Trim('"').Trim("'").Trim()
     if (-not (Test-AnthropicBicimi $Anahtar)) {
-        return [pscustomobject]@{ Tamam = $false; Neden = 'bicim'; Mesaj = "Anahtar kabul edilmedi; Claude anahtarları 'sk-ant-' ile başlar. Kopyalarken başında ya da sonunda boşluk kalmış, ya da eksik kopyalanmış olabilir." }
+        return [pscustomobject]@{ Tamam = $false; Neden = 'bicim'; Mesaj = "Anahtar kabul edilmedi; içinde boşluk var ya da eksik kopyalanmış olabilir. Anahtarı baştan sona yeniden kopyalayıp yapıştır." }
     }
     $cfg = 'header = "x-api-key: ' + $Anahtar + '"' + "`n" + 'header = "anthropic-version: 2023-06-01"' + "`n"
     $taban = 'https://api.anthropic.com'

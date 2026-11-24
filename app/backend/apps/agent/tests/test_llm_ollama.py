@@ -3,7 +3,7 @@ import json
 
 import httpx2
 from django.core.exceptions import ImproperlyConfigured
-from django.test import SimpleTestCase, override_settings
+from django.test import SimpleTestCase, TestCase, override_settings
 
 from apps.agent.schemas import AltQueryOutput
 from apps.agent.services import llm as llm_module
@@ -13,7 +13,7 @@ from apps.agent.services.llm_ollama import (
     MSG_OLLAMA_NO_MODEL,
     OllamaLLM,
 )
-from apps.agent.tests.test_llm_settings import load_base
+from apps.agent.tests.test_llm_settings import agent_value, load_base
 
 VALID = '{"en_query": "a", "hyde": "b"}'
 CALL = {"step": "parse", "system": "SYS", "user": "USER", "effort": "low", "max_tokens": 321}
@@ -168,7 +168,7 @@ class StreamTests(SimpleTestCase):
         self.assertEqual(ctx.exception.message, llm_module.MSG_TRUNCATED)
 
 
-class BuildAndSettingsTests(SimpleTestCase):
+class BuildAndSettingsTests(TestCase):
     @override_settings(LLM_PROVIDER="ollama")
     def test_build_llm_picks_ollama(self):
         self.assertIsInstance(llm_module.build_llm(), OllamaLLM)
@@ -183,11 +183,12 @@ class BuildAndSettingsTests(SimpleTestCase):
         self.assertEqual(ns["OLLAMA_MODEL"], "qwen3:4b-instruct-2507-q4_K_M")
         self.assertEqual(ns["OLLAMA_NUM_CTX"], 12288)
         self.assertEqual(ns["AGENT"]["max_concurrent_calls"], 6)
+        self.assertEqual(agent_value(ns, "max_concurrent_calls", "anthropic"), 6)
 
         ns = load_base(LLM_PROVIDER="ollama", OLLAMA_NUM_CTX="8192")
         self.assertEqual(ns["OLLAMA_NUM_CTX"], 8192)
-        self.assertEqual(ns["AGENT"]["max_concurrent_calls"], 1)
-        self.assertEqual(ns["AGENT"]["request_timeout_s"], 300)
+        self.assertEqual(agent_value(ns, "max_concurrent_calls", "ollama"), 1)
+        self.assertEqual(agent_value(ns, "request_timeout_s", "ollama"), 300)
 
     def test_invalid_provider_and_ctx_fail_at_startup(self):
         with self.assertRaises(ImproperlyConfigured) as ctx:

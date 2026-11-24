@@ -7,12 +7,11 @@
 - birincil model 503'lerle tükenirse ya da günlük kotası dolarsa `GEMINI_FALLBACK_MODELS`'taki
   sıradaki modele geçilir (10 dakika kalıcı),
 - SDK'nın kendi yeniden denemesi kapalı (çifte deneme kotayı yakar).
-Anahtar yalnız ortamdan (GEMINI_API_KEY) okunur; metinler ve anahtar loglanmaz.
+Anahtar etkin ayardan gelir (kayıtlı ya da GEMINI_API_KEY); metinler ve anahtar loglanmaz.
 """
 
 import asyncio
 import logging
-import os
 import re
 import threading
 import time
@@ -24,6 +23,7 @@ from google import genai
 from google.genai import errors, types
 from pydantic import ValidationError
 
+from apps.agent.services import llm_config
 from apps.agent.services.llm import (
     MSG_BAD_OUTPUT,
     MSG_CONFIG,
@@ -213,11 +213,13 @@ class GeminiLLM:
         *,
         client: genai.Client | None = None,
         model: str | None = None,
+        api_key: str | None = None,
         limiter: RateLimiter | None = None,
         sleep: Callable[[float], Awaitable[None]] = asyncio.sleep,
         rotation: ModelRotation | None = None,
     ):
         self._client = client
+        self._api_key = api_key
         self.model = model or settings.GEMINI_MODEL
         self._limiter = limiter or shared_limiter()
         self._sleep = sleep
@@ -229,16 +231,16 @@ class GeminiLLM:
     def client(self) -> genai.Client:
         # Anahtar eksikse uygulama açılışı değil, ilk çağrı hata verir.
         if self._client is None:
-            api_key = os.environ.get("GEMINI_API_KEY")
+            api_key = self._api_key or llm_config.env_api_key("gemini")
             if not api_key:
-                logger.error("GEMINI_API_KEY tanımlı değil")
+                logger.error("Gemini anahtarı tanımlı değil")
                 raise LLMError(MSG_CONFIG)
             self._client = genai.Client(
                 api_key=api_key,
                 # Zaman aşımı tek isteğin HTTP süresidir (ms); hız sınırlayıcı ve 429 beklemesi
                 # isteğin dışında kalır. attempts=1: SDK kendi başına yeniden denemesin.
                 http_options=types.HttpOptions(
-                    timeout=int(settings.AGENT["request_timeout_s"] * 1000),
+                    timeout=int(llm_config.agent_option("request_timeout_s", "gemini") * 1000),
                     retry_options=types.HttpRetryOptions(attempts=1),
                 ),
             )

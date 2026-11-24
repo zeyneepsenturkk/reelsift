@@ -7,6 +7,9 @@ import type {
   ChatSummary,
   Collection,
   CollectionSummary,
+  LlmSettings,
+  LlmSettingsUpdate,
+  LlmTestResult,
   SendBody,
   SharedCollection,
   StreamEvent,
@@ -28,6 +31,9 @@ export type Api = {
   approveCollection(id: number): Promise<Collection>
   publishCollection(id: number): Promise<Collection>
   getShared(token: string): Promise<SharedCollection>
+  getLlmSettings(): Promise<LlmSettings>
+  updateLlmSettings(body: LlmSettingsUpdate): Promise<LlmSettings>
+  testLlmSettings(): Promise<LlmTestResult>
 }
 
 const realApi: Api = { ...client, streamMessage }

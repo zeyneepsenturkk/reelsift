@@ -201,7 +201,9 @@
 <main>
   <section class="kutu karsilama gizli" id="karsilama" aria-labelledby="k-baslik">
     <h1 id="k-baslik">Merhaba</h1>
-    <p>Şimdi ReelSift'i bu bilgisayara kuracağım: film arşivini, arama modellerini ve uygulamanın kendisini indirip hazırlayacağım. Bilgisayar açık ve internete bağlı kalsın, gerisini ben hallederim.</p>
+    <p>ReelSift, film editörleri için bir kürasyon masasıdır: doğal dille yazılan isteğe göre 94.683 filmlik arşivde arar ve her film için gerekçe ile kaynak alıntısı içeren bir seçki taslağı çıkarır.</p>
+    <p>Bu sayfa uygulamayı bu bilgisayara kurar: film arşivini, arama modellerini ve uygulamanın kendisini indirip hazırlar. Bilgisayar açık ve internete bağlı kalsın; her adımda ne yapıldığı aşağıda görünür.</p>
+    <p class="sure">Gerekenler: Docker Desktop (açık), NVIDIA ekran kartı, yaklaşık 45 GB boş disk.</p>
     <p class="sure" id="sure-tahmin">Tahmini süre: yaklaşık bir saat, internet hızına bağlı.</p>
     <div class="dugme-satir"><button class="dugme birincil buyuk" id="basla" type="button">Başla</button></div>
   </section>
@@ -525,7 +527,7 @@
 
     if (!Object.keys(satirlar).length) {
       var liste = $('#adimlar');
-      d.adimlar.forEach(function (a) { var r = satirKur(a); satirlar[a.id] = r; liste.appendChild(r.li); });
+      d.adimlar.forEach(function (a) { var r = satirKur(a); satirlar[a.id] = r; if (a.id === 'video') r.li.style.display = 'none'; liste.appendChild(r.li); });
     }
     d.adimlar.forEach(function (a) {
       if (d.kesinti && a.durum === 'suruyor') {

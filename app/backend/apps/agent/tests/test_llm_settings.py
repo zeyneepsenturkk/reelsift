@@ -18,6 +18,11 @@ def load_base(**env) -> dict:
         return runpy.run_path(str(Path(settings.BASE_DIR) / "config/settings/base.py"))
 
 
+def agent_value(ns: dict, key: str, provider: str):
+    """Ayar tablosundan sağlayıcıya göre AGENT değeri (çalışma anındaki seçimle aynı kural)."""
+    return ns["AGENT_PROVIDER_OVERRIDES"].get(provider, {}).get(key, ns["AGENT"][key])
+
+
 class LlmSettingsTests(SimpleTestCase):
     def test_defaults_keep_claude_and_safe_gemini_values(self):
         ns = load_base()
@@ -68,15 +73,19 @@ class LlmSettingsTests(SimpleTestCase):
     def test_gemini_writes_one_film_per_call_and_claude_keeps_four(self):
         # Gemini'nin PROHIBITED_CONTENT engeli iki filmin metni bir aradayken çıkabiliyor;
         # tek filmlik gerekçe çağrısı bunu önler. Claude yolu değişmez.
-        self.assertEqual(load_base()["AGENT"]["write_chunk"], 4)
-        self.assertEqual(load_base(LLM_PROVIDER="anthropic")["AGENT"]["write_chunk"], 4)
-        self.assertEqual(load_base(LLM_PROVIDER="gemini")["AGENT"]["write_chunk"], 1)
+        ns = load_base()
+        self.assertEqual(ns["AGENT"]["write_chunk"], 4)
+        self.assertEqual(agent_value(ns, "write_chunk", "anthropic"), 4)
+        self.assertEqual(agent_value(ns, "write_chunk", "gemini"), 1)
+        # Ortamdaki varsayılan sağlayıcı AGENT'i değiştirmez: seçim çalışma anında yapılır.
+        self.assertEqual(load_base(LLM_PROVIDER="gemini")["AGENT"]["write_chunk"], 4)
 
     def test_skip_refused_is_on_only_for_gemini(self):
         # Reddedilen film / aday kümesi yalnız Gemini'de atlanır; Claude yolu değişmez.
-        self.assertIs(load_base()["AGENT"]["skip_refused"], False)
-        self.assertIs(load_base(LLM_PROVIDER="anthropic")["AGENT"]["skip_refused"], False)
-        self.assertIs(load_base(LLM_PROVIDER="gemini")["AGENT"]["skip_refused"], True)
+        ns = load_base()
+        self.assertIs(ns["AGENT"]["skip_refused"], False)
+        self.assertIs(agent_value(ns, "skip_refused", "anthropic"), False)
+        self.assertIs(agent_value(ns, "skip_refused", "gemini"), True)
 
     def test_api_key_never_enters_settings(self):
         ns = load_base(GEMINI_API_KEY="sahte-test-anahtari")

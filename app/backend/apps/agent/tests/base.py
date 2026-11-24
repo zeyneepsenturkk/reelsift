@@ -11,7 +11,7 @@ from dataclasses import dataclass, field
 from asgiref.sync import sync_to_async
 from langgraph.checkpoint.memory import InMemorySaver
 
-from apps.agent.graph import Deps, build_graph
+from apps.agent.graph import Deps, SubjectOutput, build_graph
 from apps.agent.schemas import (
     AltQueryOutput,
     FilmWriting,
@@ -90,6 +90,7 @@ class FakeLLM:
     )  # bu filmi içeren gerekçe çağrısı reddedilir
     refused_judge_ids: set = field(default_factory=set)  # bu adayı içeren değerlendirme reddedilir
     block_step: str | None = None
+    subject: str | None = None  # bilgi sorusunda çıkarılacak konu (None = konu yok)
     reply: str = "Seçki **hazır**. Karlı kasabalar ortak nokta."
     replies: list | None = None  # doluysa her cevap çağrısı sırayla bunlardan birini verir
     calls: list = field(default_factory=list)
@@ -125,6 +126,9 @@ class FakeLLM:
         if callable(value):
             return value(user)
         return value or understood()
+
+    def _subject(self, user):
+        return SubjectOutput(subject=self.subject)
 
     def _judge(self, user):
         verdicts = []

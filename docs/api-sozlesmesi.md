@@ -1,14 +1,15 @@
-# API sözleşmesi (arayüz <-> backend), sürüm 1.4 (2026-11-18)
+# API sözleşmesi (arayüz <-> backend), sürüm 1.5 (2026-11-24)
 
+Sürüm 1.5 (dil modeli ayarı, 2026-11-24): üç yeni uç eklendi (aşağıda "Dil modeli ayarı"). Yalnız ekleme; mevcut uç ve alanlar değişmedi.
 Sürüm 1.4: `CollectionFilm.quote_source` eklendi: alıntının alındığı kaynak (tür, etiket, adres). Yalnız ekleme; mevcut alanlar değişmedi.
 
 Sürüm 1.3 (kişi araması ve Türk filmleri işi, 2026-11-17): `CollectionFilm`'e `directors` ve `actors` eklendi (film ayrıntısında gösterilir; ikisi de boş liste olabilir). `title_tr`: TMDB Türkçe adı; yoksa ve filmin özgün dili Türkçeyse özgün ad; yoksa `null`. `sources` içindeki Wikipedia bağlantısı yalnız filmin hikâye metni varsa listeye girer. Akış: `text.delta` parçaları tamamlanmış cümleler halinde gelir; `message.done.message.text` kesin metindir ve akan metinden farklı olabilir (cevap sunucuda bir kez yeniden üretilmiş olabilir), istemci metni `message.done` ile değiştirir.
 
-Sürüm 1.2 (faz 4 incelemesinden sonra): akıştaki `error` olayının kodları dört kodla sınırlandı (`collection_locked` eklendi; diğer iç kodlar `server_error`'a çevrilir). `message.start.message_id` asistan mesajının kimliğidir. `CollectionFilm.title` = `Film.title`. `countries` backend'de Türkçeye çevrilir; karşılığı olmayan ad olduğu gibi kalır.
+Sürüm 1.2: akıştaki `error` olayının kodları dört kodla sınırlandı (`collection_locked` eklendi; diğer iç kodlar `server_error`'a çevrilir). `message.start.message_id` asistan mesajının kimliğidir. `CollectionFilm.title` = `Film.title`. `countries` backend'de Türkçeye çevrilir; karşılığı olmayan ad olduğu gibi kalır.
 
-Sürüm 1.1 (faz 5 tesliminden sonra): `notice` kayıtlı mesajda `steps` içinde saklanır (`StepKey` += `notice`); `CollectionSummary.approved_at` eklendi. "Tekrar dene" aynı metni yeni mesaj olarak gönderir (ayrı uç yok). Kullanıcı rolü ("editör") arayüzde sabit metindir.
+Sürüm 1.1: `notice` kayıtlı mesajda `steps` içinde saklanır (`StepKey` += `notice`); `CollectionSummary.approved_at` eklendi. "Tekrar dene" aynı metni yeni mesaj olarak gönderir (ayrı uç yok). Kullanıcı rolü ("editör") arayüzde sabit metindir.
 
-Arayüz (faz 5) ve backend (faz 4, 6) bu dosyaya göre yazılır. Değişiklik gerekirse kod değil ÖNCE bu dosya değişir.
+Arayüz ve backend bu dosyaya göre yazılır. Değişiklik gerekirse kod değil ÖNCE bu dosya değişir.
 
 ## Genel
 - Kök: `/api/`. Arayüz aynı kökten servis edilir (geliştirmede Vite vekili). JSON, UTF-8. Zamanlar ISO 8601 (UTC).
@@ -159,3 +160,31 @@ Kurallar:
 - `poster_url`: `https://image.tmdb.org/t/p/w342<poster_path>`; `poster_path` boşsa `null`.
 - `quote_source` (1.4): `CollectionFilm` kaydındaki `source_kind` / `source_url`'den üretilir. Etiketler: `plot` "Wikipedia · hikâye", `overview` "TMDB · tanıtım", `review` "izleyici incelemesi". `source_url` boşsa `url` null.
 - `sources`: Wikipedia hikâye bağlantısı (filmin `wikipedia_url`'i, etiket "Wikipedia · hikâye"), TMDB sayfası (`https://www.themoviedb.org/movie/<tmdb_id>`, etiket "TMDB · tanıtım"); olmayan kaynak listeye girmez.
+
+## Dil modeli ayarı (1.5)
+Oturum açmış her kullanıcı kullanır (yönetici şartı yok; tek kullanıcılı yerel kurulum). Yazan uçlarda `X-CSRFToken` gerekir; girişsiz 401 `not_authenticated`. Sağlayıcı ve anahtarlar sunucuyu yeniden başlatmadan, bir sonraki istekte geçerli olur. `.env` varsayılandır; kaydedilen ayar onun üstüne yazar.
+
+```ts
+type LlmProvider = "anthropic" | "gemini" | "ollama";
+
+type LlmSettings = {
+  provider: LlmProvider;
+  source: "env" | "saved";    // "saved": arayüzden kaydedilmiş ayar var
+  anthropic: { configured: boolean; key_hint: string | null; model: string };  // key_hint: "…abcd" (son 4 karakter)
+  gemini: { configured: boolean; key_hint: string | null; model: string };
+  ollama: { base_url: string; model: string };
+};
+```
+
+| Yöntem ve yol | Gövde | Cevap |
+|---|---|---|
+| `GET /api/settings/llm` | - | 200 `LlmSettings` |
+| `PUT /api/settings/llm` | `{provider, anthropic_api_key?, gemini_api_key?, ollama_base_url?, ollama_model?}` | 200 `LlmSettings`; 400 `missing_key` / `invalid_key` / `invalid_url`; 422 `validation_error` (bilinmeyen sağlayıcı) |
+| `POST /api/settings/llm/test` | - | 200 `{ok: true, seconds}` ya da `{ok: false, message}` |
+
+- Boş ya da gönderilmeyen alan "olanı koru" demektir; kayıtlı anahtar silinmez.
+- `missing_key`: seçilen sağlayıcının anahtarı ne kayıtlı ne ortamda. Ollama için anahtar gerekmez.
+- `invalid_key`: anahtar kırpıldıktan sonra 20 karakterden kısa, 300'den uzun, içinde boşluk / satır sonu ya da ASCII dışı / yazdırılamayan karakter var. Önek ya da alfabe denetimi yoktur (geçerli anahtar reddedilmez); gerçek geçerlilik `test` ucuyla anlaşılır. Baştaki / sondaki boşluk ve tırnak sessizce kırpılır.
+- `invalid_url`: Ollama adresi `http://` ya da `https://` ile başlamalı (adreste kullanıcı bilgisi olamaz).
+- Anahtarın kendisi hiçbir cevapta dönmez; yalnız `configured` ve `key_hint`.
+- `test` etkin ayarla çok kısa gerçek bir model çağrısı yapar; `message` Türkçe ve kullanıcıya dönüktür (ham sağlayıcı cevabı yok). Hata da 200 ile `ok: false` döner.

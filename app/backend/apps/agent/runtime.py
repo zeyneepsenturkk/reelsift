@@ -15,7 +15,7 @@ from psycopg.rows import dict_row
 from psycopg_pool import AsyncConnectionPool
 
 from apps.agent.graph import Deps, build_graph
-from apps.agent.services.llm import build_llm
+from apps.agent.services.llm import SettingsLLM
 from apps.agent.services.retrieval import SearchServiceRetrieval
 from apps.core.exceptions import ServiceError
 
@@ -72,7 +72,7 @@ async def open_runtime(*, llm=None, retrieval=None):
         saver = AsyncPostgresSaver(pool)
         await saver.setup()
         graph = build_graph(
-            Deps(llm=llm or build_llm(), retrieval=retrieval or SearchServiceRetrieval()),
+            Deps(llm=llm or SettingsLLM(), retrieval=retrieval or SearchServiceRetrieval()),
             saver,
         )
         set_graph(graph)

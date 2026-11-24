@@ -6,6 +6,7 @@ from ninja import NinjaAPI
 from ninja.errors import AuthenticationError, HttpError, ValidationError
 
 from apps.accounts.api import router as accounts_router
+from apps.agent.api import router as agent_router
 from apps.chats.api import router as chats_router
 from apps.core.api import router as core_router
 from apps.core.exceptions import ServiceError
@@ -75,6 +76,7 @@ api.add_router("", core_router)
 api.add_router("", accounts_router)
 api.add_router("", chats_router)
 api.add_router("", curation_router)
+api.add_router("", agent_router)
 
 
 # Kimlik gerektirmeyen catch-all: CSRF denetimi POST'ta HTML 403 döndürüp tek tip

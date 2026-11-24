@@ -4,6 +4,9 @@ import type {
   ChatSummary,
   Collection,
   CollectionSummary,
+  LlmSettings,
+  LlmSettingsUpdate,
+  LlmTestResult,
   SharedCollection,
   User,
 } from './types.ts'
@@ -71,3 +74,7 @@ export const publishCollection = (id: number) =>
   request<Collection>('POST', `/collections/${id}/publish`)
 export const getShared = (token: string) =>
   request<SharedCollection>('GET', `/share/${encodeURIComponent(token)}`)
+
+export const getLlmSettings = () => request<LlmSettings>('GET', '/settings/llm')
+export const updateLlmSettings = (body: LlmSettingsUpdate) => request<LlmSettings>('PUT', '/settings/llm', body)
+export const testLlmSettings = () => request<LlmTestResult>('POST', '/settings/llm/test')

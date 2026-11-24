@@ -23,7 +23,7 @@ from django.db import transaction
 from langgraph.config import get_stream_writer
 from langgraph.graph import START, StateGraph
 from langgraph.types import interrupt
-from pydantic import ValidationError
+from pydantic import BaseModel, Field, ValidationError
 
 from apps.agent import prompts
 from apps.agent.schemas import (
@@ -44,7 +44,7 @@ from apps.agent.schemas import (
     clean_people,
     sanitize_request,
 )
-from apps.agent.services import data, language, relax, texts
+from apps.agent.services import data, language, llm_config, mcp_client, relax, texts
 from apps.agent.services.llm import MSG_BAD_OUTPUT, LLMError, LLMRefused
 from apps.agent.services.verification import verify_writings
 from apps.chats.models import Chat
@@ -76,6 +76,7 @@ STRUCTURED_MAX_TOKENS = 6000
 UNDERSTAND_MAX_TOKENS = 4000
 WRITE_MAX_TOKENS = 8000
 CHAT_MAX_TOKENS = 4000
+SUBJECT_MAX_TOKENS = 500
 
 
 class AgentState(TypedDict, total=False):
@@ -124,6 +125,12 @@ class AgentState(TypedDict, total=False):
     collection_id: int | None
     steps: list[dict]
     elapsed: float
+
+
+class SubjectOutput(BaseModel):
+    # Sorunun hakkında olduğu kişi, film, tür ya da kavramın adı; genel sohbet ya da uygulama
+    # kullanımı sorusuysa null.
+    subject: str | None = Field(default=None, max_length=120)
 
 
 @dataclass
@@ -760,7 +767,7 @@ class Nodes:
         try:
             return await self._judge_ask(brief, films, chunk)
         except LLMRefused:
-            if not self.cfg.get("skip_refused"):
+            if not llm_config.agent_option("skip_refused"):
                 raise
         # Reddedilen küme ikiye bölünür (tek düzey); yine reddedilen yarı "uymuyor" sayılır.
         # Tek adayda aynı soru yinelenmez.
@@ -985,7 +992,9 @@ class Nodes:
         brief = describe_request(
             request, state["instruction"], state["text"], bool(state.get("action"))
         )
-        chunks = chunked([fid for fid in film_ids if fid in films], self.cfg["write_chunk"])
+        chunks = chunked(
+            [fid for fid in film_ids if fid in films], llm_config.agent_option("write_chunk")
+        )
         outputs = await gather_all(
             self._write_chunk(brief, films, facts, chunk, problems) for chunk in chunks
         )
@@ -1012,7 +1021,7 @@ class Nodes:
                 max_tokens=WRITE_MAX_TOKENS,
             )
         except LLMRefused as refused:
-            if not self.cfg.get("skip_refused"):
+            if not llm_config.agent_option("skip_refused"):
                 raise
             logger.warning(
                 "llm step=write film_id=%s reddedildi, taslaga girmedi block_reason=%s",
@@ -1258,11 +1267,45 @@ class Nodes:
         for note in state.get("notes", []):
             parts.append(f"<notes>{note}</notes>")
         titles = await sync_to_async(data.film_names)(list(film_ids))
+        source = await self._source_for(state["text"])
+        if source:
+            parts.append(
+                f'<source_summary title="{data.neutralize(source["baslik"])}">\n'
+                f"{data.neutralize(source['ozet'])}\n</source_summary>"
+            )
         reply = await self._stream(
             writer, prompts.ANSWER_SYSTEM, "\n".join(parts), "answer", titles
         )
+        if source:
+            line = f"Kaynak: Wikipedia, {source['adres']}"
+            _emit(writer, "text.delta", {"delta": f"\n\n{line}"})
+            reply = f"{reply}\n\n{line}"
         suggestions = GENERIC_SUGGESTIONS if state["intent"] == "question" else OTHER_SUGGESTIONS
         return await self._finish(state, writer, reply, suggestions, None)
+
+    async def _source_for(self, text: str) -> dict | None:
+        """Mesajın konusu varsa MCP aracıyla Wikipedia özeti getirir; konu yoksa, araç bir şey
+        bulamazsa ya da bir adım hata verirse None (cevap kaynaksız sürer)."""
+        if not settings.ANSWER_SOURCES:
+            return None
+        try:
+            out = await self.llm.structured(
+                step="subject",
+                system=prompts.SUBJECT_SYSTEM,
+                user=f"<user_message>{data.neutralize(text)}</user_message>",
+                output=SubjectOutput,
+                effort=self.cfg["efforts"]["parse"],
+                max_tokens=SUBJECT_MAX_TOKENS,
+            )
+        except LLMError:
+            return None
+        subject = (out.subject or "").strip()
+        if not subject:
+            return None
+        found = await mcp_client.call_tool("wikipedia_ozet", {"baslik": subject, "dil": "tr"})
+        if not found or not found.get("bulundu") or not found.get("ozet") or not found.get("adres"):
+            return None
+        return found
 
     async def _stream(self, writer, system: str, user: str, step: str, titles=()) -> str:
         """Cevap cümle cümle akar: istemciye yalnız denetimden geçmiş, tamamlanmış cümleler gider.

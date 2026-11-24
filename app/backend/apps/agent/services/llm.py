@@ -4,7 +4,8 @@ Kurallar (model Haiku 5.5 <-> Sonnet 5.5 arasında değişebilmeli):
 - `temperature`/`top_p`/`top_k` ve `thinking` gönderilmez; derinlik `output_config.effort` ile.
 - Yapılı çıktı `messages.parse` ile; elle JSON ayıklama ve prefill yok.
 - Cevap blok türüne göre okunur; `max_tokens` ve `refusal` hata sayılır.
-- Anahtar yalnız ortamdan okunur; metinler loglanmaz, yalnız kullanım ve süre.
+- Anahtar etkin ayardan (kayıtlı ya da ortam; `llm_config`) gelir; metinler loglanmaz,
+  yalnız kullanım ve süre.
 """
 
 import asyncio
@@ -19,6 +20,7 @@ import anthropic
 from django.conf import settings
 from pydantic import BaseModel
 
+from apps.agent.services import llm_config
 from apps.core.exceptions import ServiceError
 
 logger = logging.getLogger(__name__)
@@ -94,10 +96,12 @@ class AnthropicLLM:
         *,
         client: anthropic.AsyncAnthropic | None = None,
         model: str | None = None,
+        api_key: str | None = None,
     ):
         self._client = client
+        self._api_key = api_key
         self.model = model or settings.ANTHROPIC_MODEL
-        limit = settings.AGENT["max_concurrent_calls"]
+        limit = llm_config.agent_option("max_concurrent_calls", "anthropic")
         self._semaphore = asyncio.Semaphore(limit)
 
     @property
@@ -105,8 +109,10 @@ class AnthropicLLM:
         # Anahtar eksikse uygulama açılışı değil, ilk çağrı hata verir.
         if self._client is None:
             try:
+                # Anahtar verilmediyse SDK ortamdan (ANTHROPIC_API_KEY) okur.
                 self._client = anthropic.AsyncAnthropic(
-                    timeout=settings.AGENT["request_timeout_s"],
+                    api_key=self._api_key or None,
+                    timeout=llm_config.agent_option("request_timeout_s", "anthropic"),
                     max_retries=settings.AGENT["llm_max_retries"],
                 )
             except anthropic.AnthropicError as exc:
@@ -206,14 +212,41 @@ class AnthropicLLM:
         self._check_stop(step, message)
 
 
-def build_llm():
-    """`LLM_PROVIDER` ayarına göre dil modeli istemcisi; Gemini paketi yalnız seçilince yüklenir."""
-    if settings.LLM_PROVIDER == "ollama":
+class SettingsLLM:
+    """Etkin ayara bağlı istemci: ayar değişince bir sonraki çağrıda yeni istemci kurulur.
+
+    Ayar aynı kaldıkça aynı istemci (ve eşzamanlılık sınırı) kullanılır."""
+
+    def __init__(self):
+        self._config = None
+        self._llm = None
+
+    async def _current(self):
+        config = await llm_config.aget_effective()
+        if self._llm is None or config != self._config:
+            self._llm = build_llm(config)
+            self._config = config
+        return self._llm
+
+    async def structured(self, **kwargs):
+        llm = await self._current()
+        return await llm.structured(**kwargs)
+
+    async def stream_text(self, **kwargs) -> AsyncIterator[str]:
+        llm = await self._current()
+        async for delta in llm.stream_text(**kwargs):
+            yield delta
+
+
+def build_llm(config: llm_config.EffectiveConfig | None = None):
+    """Etkin sağlayıcıya göre dil modeli istemcisi; Gemini paketi yalnız seçilince yüklenir."""
+    config = config or llm_config.get_effective()
+    if config.provider == "ollama":
         from apps.agent.services.llm_ollama import OllamaLLM
 
-        return OllamaLLM()
-    if settings.LLM_PROVIDER == "gemini":
+        return OllamaLLM(base_url=config.ollama_base_url, model=config.ollama_model)
+    if config.provider == "gemini":
         from apps.agent.services.llm_gemini import GeminiLLM
 
-        return GeminiLLM()
-    return AnthropicLLM()
+        return GeminiLLM(api_key=config.gemini_key or None, model=config.gemini_model)
+    return AnthropicLLM(api_key=config.anthropic_key or None, model=config.anthropic_model)

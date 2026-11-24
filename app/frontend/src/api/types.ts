@@ -110,3 +110,22 @@ export type StreamEvent =
   | { event: 'error'; data: { detail: string; code: string } }
 
 export type StreamEventName = StreamEvent['event']
+
+export type LlmProvider = 'anthropic' | 'gemini' | 'ollama'
+export type LlmKeyInfo = { configured: boolean; key_hint: string | null; model: string }
+export type LlmSettings = {
+  provider: LlmProvider
+  source: 'env' | 'saved'
+  anthropic: LlmKeyInfo
+  gemini: LlmKeyInfo
+  ollama: { base_url: string; model: string }
+}
+// Boş ya da gönderilmeyen anahtar alanı kayıtlı değeri korur.
+export type LlmSettingsUpdate = {
+  provider: LlmProvider
+  anthropic_api_key?: string
+  gemini_api_key?: string
+  ollama_base_url?: string
+  ollama_model?: string
+}
+export type LlmTestResult = { ok: true; seconds: number } | { ok: false; message: string }
